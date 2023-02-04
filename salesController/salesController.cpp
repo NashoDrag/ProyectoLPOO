@@ -82,3 +82,54 @@ Employee^ salesController::Controller::Login(String^ username, String^ password)
     return employee;
     // TODO: Insertar una instrucción "return" aquí
 }
+
+int salesController::Controller::AddSalesman(Vendedor^ vendedor)
+{
+    vendedor->Status = 'A';
+    salesmanList->Add(vendedor);
+    return 1;
+}
+
+int salesController::Controller::UpdateSalesman(Vendedor^ vendedor)
+{
+    for (int i = 0; i < salesmanList->Count; i++)
+        if (vendedor->Id == salesmanList[i]->Id) {
+            vendedor->Status = 'A';
+            salesmanList[i] = vendedor;
+            return 1;
+        }
+    return 0;
+}
+
+int salesController::Controller::DeleteSalesman(int vendedorId)
+{
+    for (int i = 0; i < salesmanList->Count; i++)
+        if (vendedorId == salesmanList[i]->Id) {
+            //salesmanList->RemoveAt(i);
+            salesmanList[i]->Status = 'I';
+            return 1;
+        }
+    return 0;
+}
+
+Vendedor^ salesController::Controller::QuerySalesmanById(int vendedorId)
+{
+    for (int i = 0; i < salesmanList->Count; i++)
+        if (vendedorId == salesmanList[i]->Id) {
+            return salesmanList[i];
+        }
+    return nullptr;
+}
+
+List<Vendedor^>^ salesController::Controller::QueryAllSalesmen()
+{
+    List<Vendedor^>^ activeSalesmanList = gcnew List<Vendedor^>();
+    for (int i = 0; i < salesmanList->Count; i++) {
+        if (salesmanList[i]->Status == 'A') {
+            activeSalesmanList->Add(salesmanList[i]);
+        }
+    }
+    return activeSalesmanList;
+}
+
+

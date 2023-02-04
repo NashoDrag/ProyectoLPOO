@@ -16,7 +16,7 @@ namespace salesController {
 		static List <Jefe_de_almacen^>^ supervisorList = gcnew List<Jefe_de_almacen^>(); // Lista de supervisores de tienda
 		static List <Employee^>^ operatorList = gcnew List<Employee^>(); // Lista de empleados
 		static List <Detalle_Pedido^>^ salesList = gcnew List<Detalle_Pedido^>(); // Lista de ventas registradas
-		static List <Person^>^ personList = gcnew List<Person^>();
+		//static List <Person^>^ personList = gcnew List<Person^>();
 
 		static List <Sale^>^ sale = gcnew List<Sale^>();
 		//static List <Warehouse^>^ warehouse = gcnew List<Warehouse^>();
@@ -28,9 +28,21 @@ namespace salesController {
 		static int UpdateMedicine(Medicine^ medicine);
 		static int DeleteProduct(int medicineId);
 
-		// Metodo CRUD de 
+		// Metodo CRUD de la INDUSTRIA PROVEEDORA
+		static int AddIndustry(Industria_Proveedora^ industry);
+		static Industria_Proveedora^ QueryIndustryById(int industryId);
+		static List<Industria_Proveedora^>^ QueryAllIndustries();
+		static int UpdateIndustry(Industria_Proveedora^ industry);
+		static int DeleteIndustry(int industryId);
 
+		//Métodos CRUD de VENDEDOR
+		static int AddSalesman(Vendedor^);
+		static int UpdateSalesman(Vendedor^);
+		static int DeleteSalesman(int vendedorId);
+		static Vendedor^ QuerySalesmanById(int vendedorId);
+		static List<Vendedor^>^ QueryAllSalesmen();
 
+		// hola
 		//Autenticación de usuario
 		static Employee^ Login(String^ username, String^ password);
 	};
