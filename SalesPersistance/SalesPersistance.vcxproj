@@ -20,10 +20,10 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
-    <ProjectGuid>{0A59AC8C-419C-4646-9FE6-9947C79CD68D}</ProjectGuid>
+    <ProjectGuid>{AC5DD88E-1A54-408B-82CE-93D37D21BCB2}</ProjectGuid>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <Keyword>ManagedCProj</Keyword>
-    <RootNamespace>salesController</RootNamespace>
+    <RootNamespace>SalesPersistance</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
     <EnableManagedPackageReferenceSupport>true</EnableManagedPackageReferenceSupport>
   </PropertyGroup>
@@ -122,7 +122,7 @@
   <ItemGroup>
     <ClInclude Include="pch.h" />
     <ClInclude Include="Resource.h" />
-    <ClInclude Include="salesController.h" />
+    <ClInclude Include="SalesPersistance.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AssemblyInfo.cpp" />
@@ -132,7 +132,7 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
-    <ClCompile Include="salesController.cpp" />
+    <ClCompile Include="SalesPersistance.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="app.rc" />
@@ -148,9 +148,6 @@
   <ItemGroup>
     <ProjectReference Include="..\salesModel\salesModel.vcxproj">
       <Project>{5653d8d2-0c87-4da5-8e25-65eac5ce5ea4}</Project>
-    </ProjectReference>
-    <ProjectReference Include="..\SalesPersistance\SalesPersistance.vcxproj">
-      <Project>{ac5dd88e-1a54-408b-82ce-93d37d21bcb2}</Project>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

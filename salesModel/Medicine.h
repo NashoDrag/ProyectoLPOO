@@ -11,17 +11,18 @@ namespace salesModel {
     [Serializable]
     public ref class Medicine {
     protected:
-        int id;
+       // int id;
         void Activate();
     public:
         //Métodos de acceso para id
-        int getId() {
+       /* int getId() {
             return id;
         }
         void setId(int id) {
             this->id = id;
             //id = _id;
-        }
+        }*/
+        property int id;
         property String^ name;
         property String^ brand;
         property String^ description;

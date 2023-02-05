@@ -29,11 +29,11 @@ namespace salesController {
 		static int DeleteProduct(int medicineId);
 
 		// Metodo CRUD de la INDUSTRIA PROVEEDORA
-		static int AddIndustry(Industria_Proveedora^ industry);
+		/*static int AddIndustry(Industria_Proveedora^ industry);
 		static Industria_Proveedora^ QueryIndustryById(int industryId);
 		static List<Industria_Proveedora^>^ QueryAllIndustries();
 		static int UpdateIndustry(Industria_Proveedora^ industry);
-		static int DeleteIndustry(int industryId);
+		static int DeleteIndustry(int industryId);*/
 
 		//Métodos CRUD de VENDEDOR
 		static int AddSalesman(Vendedor^);
