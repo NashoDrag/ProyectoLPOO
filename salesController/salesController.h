@@ -42,7 +42,7 @@ namespace salesController {
 		static Vendedor^ QuerySalesmanById(int vendedorId);
 		static List<Vendedor^>^ QueryAllSalesmen();
 
-		// hola
+		
 		//Autenticación de usuario
 		static Employee^ Login(String^ username, String^ password);
 	};
