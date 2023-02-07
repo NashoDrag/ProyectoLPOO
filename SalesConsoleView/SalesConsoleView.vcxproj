@@ -145,6 +145,9 @@
     <ClInclude Include="SaleForm.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="StockForm.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AssemblyInfo.cpp" />
@@ -160,6 +163,7 @@
     <ClCompile Include="ProductSearchForm.cpp" />
     <ClCompile Include="SaleForm.cpp" />
     <ClCompile Include="SalesConsoleView.cpp" />
+    <ClCompile Include="StockForm.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="app.ico" />
@@ -194,6 +198,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="SaleForm.resx">
       <DependentUpon>SaleForm.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StockForm.resx">
+      <DependentUpon>StockForm.h</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
