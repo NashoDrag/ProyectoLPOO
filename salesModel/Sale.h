@@ -1,10 +1,13 @@
 /**
  * Project Untitled
  */
-
-#include "Vendedor.h"
 #pragma once
+#include "Vendedor.h"
+#include "Person.h"
+#include "Detalle_Pedido.h"
+
 using namespace System;
+using namespace System::Collections::Generic;
 namespace salesModel {
     [Serializable]
     public ref class Sale {
@@ -16,5 +19,11 @@ namespace salesModel {
         property char Status;
         property double Total;
         property Vendedor^ Vendedor;
+        property Person^ Person;
+        property List<Detalle_Pedido^>^ SaleDetails;
+
+        Sale() {
+            SaleDetails = gcnew List<Detalle_Pedido^>();
+        }
     };
 }
