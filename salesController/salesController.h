@@ -3,6 +3,7 @@
 using namespace System;
 using namespace System::Collections::Generic;
 using namespace salesModel;
+using namespace System::IO;
 
 namespace salesController {
 	public ref class Controller
@@ -28,12 +29,12 @@ namespace salesController {
 		static int UpdateMedicine(Medicine^ medicine);
 		static int DeleteProduct(int medicineId);
 
-		// Metodo CRUD de la INDUSTRIA PROVEEDORA
-		/*static int AddIndustry(Industria_Proveedora^ industry);
+		//Metodo CRUD de la INDUSTRIA PROVEEDORA
+		static int AddIndustry(Industria_Proveedora^ industry);
 		static Industria_Proveedora^ QueryIndustryById(int industryId);
 		static List<Industria_Proveedora^>^ QueryAllIndustries();
 		static int UpdateIndustry(Industria_Proveedora^ industry);
-		static int DeleteIndustry(int industryId);*/
+		static int DeleteIndustry(int industryId);
 
 		//Métodos CRUD de VENDEDOR
 		static int AddSalesman(Vendedor^);
@@ -41,6 +42,12 @@ namespace salesController {
 		static int DeleteSalesman(int vendedorId);
 		static Vendedor^ QuerySalesmanById(int vendedorId);
 		static List<Vendedor^>^ QueryAllSalesmen();
+
+		// Metodo CRUD de WarehouseManager
+		static int AddSalary(Jefe_de_almacen^ salary);
+		static int UpdateSalary(Jefe_de_almacen^ salary);
+		static int DeleteSalary(int salaryID);
+		static Jefe_de_almacen^ QuerySalary(int salaryID);
 
 		
 		//Autenticación de usuario

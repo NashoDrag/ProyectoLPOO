@@ -8,7 +8,7 @@ int salesController::Controller::AddMedicine(Medicine^ medicine)
     medicineList->Add(medicine);
 
     //return medicine->getId();
-    //Persistance::PersistXML("Medicines.xml", medicineList);
+    Persistance::PersistXML("Medicines.xml", medicineList);
 
     return medicine->id;
 
@@ -47,6 +47,52 @@ int salesController::Controller::DeleteProduct(int medicineId)
         if (medicineList[i]->id == medicineId) {
             medicineList->RemoveAt(i);
             return medicineId;
+        }
+    return 0;
+}
+
+int salesController::Controller::AddIndustry(Industria_Proveedora^ industry)
+{
+    corporationList->Add(industry);
+
+    //return medicine->getId();
+    Persistance::PersistXML("WarhouseManagerContacts.xml", corporationList);
+
+    return industry->Id_corporation;
+}
+
+Industria_Proveedora^ salesController::Controller::QueryIndustryById(int industryId)
+{
+    corporationList = (List<Industria_Proveedora^>^)Persistance::LoadXMLData("WarhouseManagerContacts.xml");
+    for (int i = 0; i < corporationList->Count; i++)
+        //if (medicineList[i]->getId() == medicineId)
+        if (corporationList[i]->Id_corporation == industryId)
+            return corporationList[i];
+    return nullptr;
+}
+
+List<Industria_Proveedora^>^ salesController::Controller::QueryAllIndustries()
+{
+    corporationList = (List<Industria_Proveedora^>^)Persistance::LoadXMLData("WarhouseManagerContacts.xml");
+    return corporationList;
+}
+
+int salesController::Controller::UpdateIndustry(Industria_Proveedora^ industry)
+{
+    for (int i = 0; i < corporationList->Count; i++)
+        if (corporationList[i]->Id_corporation == industry->Id_corporation) {
+            corporationList[i] = industry;
+            return industry->Id_corporation;
+        }
+    return 0;
+}
+
+int salesController::Controller::DeleteIndustry(int industryId)
+{
+    for (int i = 0; i < corporationList->Count; i++)
+        if (corporationList[i]->Id_corporation == industryId) {
+            corporationList->RemoveAt(i);
+            return industryId;
         }
     return 0;
 }
@@ -139,6 +185,44 @@ List<Vendedor^>^ salesController::Controller::QueryAllSalesmen()
         }*/
     }
     return activeSalesmanList;
+}
+
+int salesController::Controller::AddSalary(Jefe_de_almacen^ salary)
+{
+    supervisorList->Add(salary);
+    Persistance::PersistXML("EmployeeSalary.xml", supervisorList);
+
+    return salary->salaryId;
+}
+
+int salesController::Controller::UpdateSalary(Jefe_de_almacen^ salary)
+{
+    for (int i = 0; i < supervisorList->Count; i++)
+        if (supervisorList[i]->salaryId == salary->salaryId) {
+            supervisorList[i] = salary;
+            return salary->salaryId;
+        }
+    return 0;
+}
+
+int salesController::Controller::DeleteSalary(int salaryID)
+{
+    for (int i = 0; i < supervisorList->Count; i++)
+        if (supervisorList[i]->salaryId == salaryID) {
+            supervisorList->RemoveAt(i);
+            return salaryID;
+        }
+    return 0;
+}
+
+Jefe_de_almacen^ salesController::Controller::QuerySalary(int salaryID)
+{
+    supervisorList = (List<Jefe_de_almacen^>^)Persistance::LoadXMLData("EmployeeSalary.xml");
+    for (int i = 0; i < supervisorList->Count; i++)
+        //if (medicineList[i]->getId() == medicineId)
+        if (supervisorList[i]->salaryId == salaryID)
+            return supervisorList[i];
+    return nullptr;
 }
 
 

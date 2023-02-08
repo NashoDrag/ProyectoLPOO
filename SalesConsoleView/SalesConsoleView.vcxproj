@@ -145,6 +145,15 @@
     <ClInclude Include="SaleForm.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="WarehouseBuys.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="WarehouseManager.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="WarehouseManagerContactsForm.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AssemblyInfo.cpp" />
@@ -160,6 +169,9 @@
     <ClCompile Include="ProductSearchForm.cpp" />
     <ClCompile Include="SaleForm.cpp" />
     <ClCompile Include="SalesConsoleView.cpp" />
+    <ClCompile Include="WarehouseBuys.cpp" />
+    <ClCompile Include="WarehouseManager.cpp" />
+    <ClCompile Include="WarehouseManagerContactsForm.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="app.ico" />
@@ -194,6 +206,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="SaleForm.resx">
       <DependentUpon>SaleForm.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WarehouseBuys.resx">
+      <DependentUpon>WarehouseBuys.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WarehouseManager.resx">
+      <DependentUpon>WarehouseManager.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WarehouseManagerContactsForm.resx">
+      <DependentUpon>WarehouseManagerContactsForm.h</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
