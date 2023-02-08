@@ -131,6 +131,9 @@
     <ClInclude Include="CLIENTES_REGISTRADOS.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="CustomerForm.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
     <ClInclude Include="LoginForm.h">
       <FileType>CppForm</FileType>
     </ClInclude>
@@ -152,6 +155,7 @@
   <ItemGroup>
     <ClCompile Include="AssemblyInfo.cpp" />
     <ClCompile Include="CLIENTES_REGISTRADOS.cpp" />
+    <ClCompile Include="CustomerForm.cpp" />
     <ClCompile Include="LoginForm.cpp" />
     <ClCompile Include="MainForm.cpp" />
     <ClCompile Include="OrderStatusForm.cpp" />
@@ -186,6 +190,9 @@
   <ItemGroup>
     <EmbeddedResource Include="CLIENTES_REGISTRADOS.resx">
       <DependentUpon>CLIENTES_REGISTRADOS.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomerForm.resx">
+      <DependentUpon>CustomerForm.h</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.h</DependentUpon>

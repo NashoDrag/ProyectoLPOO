@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfPerson xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Person>
+    <Age>0</Age>
+    <Email>frenando@gmail.com</Email>
+    <PhoneNumber>424 365522</PhoneNumber>
+    <Name>fernando</Name>
+    <DocNumber>2542</DocNumber>
+    <Id>45</Id>
+  </Person>
+  <Person>
+    <Age>0</Age>
+    <Email>david@gmail.com</Email>
+    <PhoneNumber>42424 36255</PhoneNumber>
+    <Name>david</Name>
+    <DocNumber>3692548</DocNumber>
+    <Id>543</Id>
+  </Person>
+</ArrayOfPerson>

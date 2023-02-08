@@ -29,6 +29,15 @@ void SalesPersistance::Persistance::PersistXML(String^ fileName, Object^ persist
             serializadorXML->Serialize(output, persistObject);
         }
     }
+        if (persistObject->GetType() == List<Person^>::typeid) {
+            XmlSerializer^ serializadorXML = gcnew XmlSerializer(List<Person^>::typeid);
+            serializadorXML->Serialize(output, persistObject);
+        }
+        if (persistObject->GetType() == List<Person^>::typeid) {
+            XmlSerializer^ serializadorXML = gcnew XmlSerializer(List<Sale^>::typeid);
+            serializadorXML->Serialize(output, persistObject);
+        }
+    }
     catch (Exception^ ex) {
         throw ex;
     }
@@ -67,6 +76,24 @@ Object^ SalesPersistance::Persistance::LoadXMLData(String^ fileName)
                 res = (List<Industria_Proveedora^>^)serializadorXML->Deserialize(sr);
             }
         }
+        if (fileName->Equals("Clientes.xml")) {
+            res = gcnew List<Person^>();
+            if (File::Exists(fileName)) {
+                serializadorXML = gcnew XmlSerializer(List<Person^>::typeid);
+                res = (List<Person^>^)serializadorXML->Deserialize(sr);
+            }
+        }
+        if (fileName->Equals("sales.xml")) {
+            res = gcnew List<Sale^>();
+            if (File::Exists(fileName)) {
+                serializadorXML = gcnew XmlSerializer(List<Sale^>::typeid);
+                res = (List<Sale^>^)serializadorXML->Deserialize(sr);
+            }
+        }
+    }
+    catch (NullReferenceException^ ex) {
+        //Mandar un mensaje por correo
+        throw ex;
     }
     catch (Exception^ ex) {
         throw ex;

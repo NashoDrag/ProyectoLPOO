@@ -317,7 +317,7 @@ private: System::Void ventaToolStripMenuItem_Click(System::Object^ sender, Syste
 	saleForm->Show();
 }
 private: System::Void informeToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
-	ProductSearchForm^ productsearchform = gcnew ProductSearchForm();
+	ProductSearchForm^ productsearchform = gcnew ProductSearchForm(this);
 	productsearchform->MdiParent = this;
 	productsearchform->Show();
 }

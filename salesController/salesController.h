@@ -17,20 +17,27 @@ namespace salesController {
 		static List <Jefe_de_almacen^>^ supervisorList = gcnew List<Jefe_de_almacen^>(); // Lista de supervisores de tienda
 		static List <Employee^>^ operatorList = gcnew List<Employee^>(); // Lista de empleados
 		static List <Detalle_Pedido^>^ salesList = gcnew List<Detalle_Pedido^>(); // Lista de ventas registradas
-		//static List <Person^>^ personList = gcnew List<Person^>();
+		static List <Person^>^ clientesList = gcnew List<Person^>();  //lista de clientes
 
-		static List <Sale^>^ sale = gcnew List<Sale^>();
+		static List <Sale^>^ saleList = gcnew List<Sale^>();
 		//static List <Warehouse^>^ warehouse = gcnew List<Warehouse^>();
 	public:
 		// Metodo CRUD de Medicine
 		static int AddMedicine(Medicine^ medicine);
 		static Medicine^ QueryMedicineById(int medicineId);
+		
 		static List<Medicine^>^ QueryAllMedicines();
 		static int UpdateMedicine(Medicine^ medicine);
 		static int DeleteProduct(int medicineId);
 
 		//Metodo CRUD de la INDUSTRIA PROVEEDORA
 		static int AddIndustry(Industria_Proveedora^ industry);
+		static int DeleteMedicine(int medicineId);
+		static List<Medicine^>^ QueryMedicinesByNameOrDescription(String^ nameDesc);
+		
+
+		// Metodo CRUD de la INDUSTRIA PROVEEDORA
+		/*static int AddIndustry(Industria_Proveedora^ industry);
 		static Industria_Proveedora^ QueryIndustryById(int industryId);
 		static List<Industria_Proveedora^>^ QueryAllIndustries();
 		static int UpdateIndustry(Industria_Proveedora^ industry);
@@ -50,6 +57,20 @@ namespace salesController {
 		static Jefe_de_almacen^ QuerySalary(int salaryID);
 
 		
+
+		//metodos CRUD De Clientes
+		static int AddClient(Person^ cliente);
+		static int UpdateClient(Person^ cliente);
+		static int DeleteClient(int clientId);
+		static Person^ QueryClientById(int clientId);
+		static List<Person^>^ QueryAllClients();
+		static Person^ QueryClientByDNI(String^ clientDNI);
+		// hola
+		// operaciones de venta
+		//Operaciones de venta
+		static List<Sale^>^ QueryAllSales();
+		static int QueryLastSaleId();
+		static void RegisterSale(Sale^ sale);
 		//Autenticación de usuario
 		static Employee^ Login(String^ username, String^ password);
 	};
