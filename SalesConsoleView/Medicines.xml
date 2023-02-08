@@ -1,33 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ArrayOfMedicine xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <Medicine>
-    <stock>50</stock>
-    <price>2</price>
-    <name>Paracetamol</name>
+    <manufacturado>1</manufacturado>
+    <volumen>1</volumen>
+    <peso>1</peso>
+    <characteristica>1</characteristica>
+    <Status>65</Status>
+    <Ingredients>1</Ingredients>
+    <PresentationFormat>1</PresentationFormat>
+    <quantity>1</quantity>
+    <price>1</price>
+    <description>1</description>
+    <brand>1</brand>
+    <name>1</name>
     <id>1</id>
   </Medicine>
   <Medicine>
-    <stock>100</stock>
-    <price>5</price>
-    <name>Panadol</name>
+    <manufacturado>3</manufacturado>
+    <volumen>3</volumen>
+    <peso>12</peso>
+    <characteristica>1</characteristica>
+    <Status>65</Status>
+    <Ingredients>1</Ingredients>
+    <PresentationFormat>3</PresentationFormat>
+    <quantity>1</quantity>
+    <price>1</price>
+    <description>1</description>
+    <brand>1</brand>
+    <name>2</name>
     <id>2</id>
-  </Medicine>
-  <Medicine>
-    <stock>20</stock>
-    <price>20</price>
-    <name>Lexotiroxina sodica </name>
-    <id>3</id>
-  </Medicine>
-  <Medicine>
-    <stock>15</stock>
-    <price>8</price>
-    <name>Simvastatina</name>
-    <id>3</id>
-  </Medicine>
-  <Medicine>
-    <stock>8</stock>
-    <price>4</price>
-    <name>Nanoxona</name>
-    <id>5</id>
   </Medicine>
 </ArrayOfMedicine>

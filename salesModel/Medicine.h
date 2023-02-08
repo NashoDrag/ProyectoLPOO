@@ -27,9 +27,17 @@ namespace salesModel {
         property String^ brand;
         property String^ description;
         property double price;
-        property int stock;
+        property int quantity;
         property array<Byte>^ photo;
         property String^ due_date;
+        property String^ PresentationFormat;
+        property String^ Ingredients;
+        property char Status;
+        property String^ type;
+        property String^ characteristica;
+        property int peso;
+        property int volumen;
+        property String^ manufacturado;
 
         void Deactivate();
     };
