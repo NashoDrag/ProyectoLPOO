@@ -251,7 +251,7 @@ namespace SalesConsoleView {
 		medicine->id = Int32::Parse(textid->Text);
 		medicine->name = textname->Text;
 		medicine->price = Int32::Parse(textprice->Text);
-		medicine->stock = Int32::Parse(textstock->Text);
+		medicine->quantity = Int32::Parse(textstock->Text);
 		Controller::AddMedicine(medicine);
 		CleanControls();
 		ShowMedicines();
@@ -265,8 +265,7 @@ namespace SalesConsoleView {
 					   "" + myMedicineList[i]->id,
 						   myMedicineList[i]->name,
 						   "" + myMedicineList[i]->price,
-						   "" + myMedicineList[i]->stock
-
+						   "" + myMedicineList[i]->quantity
 				   });
 			   }
 		   }

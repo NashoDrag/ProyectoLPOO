@@ -7,8 +7,8 @@ int salesController::Controller::AddMedicine(Medicine^ medicine)
 {
     medicineList->Add(medicine);
 
-    //return medicine->getId();
-    //Persistance::PersistXML("Medicines.xml", medicineList);
+    
+    Persistance::PersistXML("Medicines.xml", medicineList);
 
     return medicine->id;
 

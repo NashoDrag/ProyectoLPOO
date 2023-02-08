@@ -44,6 +44,9 @@
     <ClInclude Include="StockForm.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
+    <ClInclude Include="OrderStatusForm.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="SalesConsoleView.cpp">
@@ -71,6 +74,9 @@
       <Filter>Archivos de origen</Filter>
     </ClCompile>
     <ClCompile Include="StockForm.cpp">
+      <Filter>Archivos de origen</Filter>
+    </ClCompile>
+    <ClCompile Include="OrderStatusForm.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
   </ItemGroup>

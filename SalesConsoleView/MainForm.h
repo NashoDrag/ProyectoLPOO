@@ -4,6 +4,7 @@
 #include "ProductSearchForm.h"
 #include "CLIENTES_REGISTRADOS.h"
 #include "StockForm.h"
+#include "OrderStatusForm.h"
 
 namespace SalesConsoleView {
 
@@ -129,7 +130,7 @@ namespace SalesConsoleView {
 			// salirToolStripMenuItem
 			// 
 			this->salirToolStripMenuItem->Name = L"salirToolStripMenuItem";
-			this->salirToolStripMenuItem->Size = System::Drawing::Size(224, 26);
+			this->salirToolStripMenuItem->Size = System::Drawing::Size(121, 26);
 			this->salirToolStripMenuItem->Text = L"Salir";
 			this->salirToolStripMenuItem->Click += gcnew System::EventHandler(this, &MainForm::salirToolStripMenuItem_Click);
 			// 
@@ -177,7 +178,7 @@ namespace SalesConsoleView {
 			// 
 			this->stockToolStripMenuItem->Name = L"stockToolStripMenuItem";
 			this->stockToolStripMenuItem->Size = System::Drawing::Size(224, 26);
-			this->stockToolStripMenuItem->Text = L"Stock";
+			this->stockToolStripMenuItem->Text = L"Agregar stock";
 			this->stockToolStripMenuItem->Click += gcnew System::EventHandler(this, &MainForm::stockToolStripMenuItem_Click);
 			// 
 			// pedidosToolStripMenuItem
@@ -272,6 +273,7 @@ namespace SalesConsoleView {
 			this->estadoDePedidosToolStripMenuItem->Name = L"estadoDePedidosToolStripMenuItem";
 			this->estadoDePedidosToolStripMenuItem->Size = System::Drawing::Size(226, 26);
 			this->estadoDePedidosToolStripMenuItem->Text = L"Estado de Pedidos";
+			this->estadoDePedidosToolStripMenuItem->Click += gcnew System::EventHandler(this, &MainForm::estadoDePedidosToolStripMenuItem_Click);
 			// 
 			// ayudaToolStripMenuItem
 			// 
@@ -326,6 +328,12 @@ private: System::Void stockToolStripMenuItem_Click(System::Object^ sender, Syste
 	StockForm^ stockForm = gcnew StockForm();
 	stockForm->MdiParent = this;
 	stockForm->Show();
+}
+
+private: System::Void estadoDePedidosToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
+	OrderStatusForm^ orderStatusForm = gcnew OrderStatusForm();
+	orderStatusForm->MdiParent = this;
+	orderStatusForm->Show();
 }
 };
 }
