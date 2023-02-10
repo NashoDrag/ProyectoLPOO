@@ -36,6 +36,7 @@ int salesController::Controller::UpdateMedicine(Medicine^ medicine)
     for (int i = 0; i < medicineList->Count; i++)
         if (medicineList[i]->id == medicine->id) {
             medicineList[i] = medicine;
+            Persistance::PersistXML("Medicines.xml", medicineList);
             return medicine->id;
         }
     return 0;
@@ -46,9 +47,21 @@ int salesController::Controller::DeleteProduct(int medicineId)
     for (int i = 0; i < medicineList->Count; i++)
         if (medicineList[i]->id == medicineId) {
             medicineList->RemoveAt(i);
+            Persistance::PersistXML("Medicines.xml", medicineList);
             return medicineId;
         }
     return 0;
+}
+
+Medicine^ salesController::Controller::QueryMedicineByName(String^ medicineName)
+{
+    medicineList = (List<Medicine^>^)Persistance::LoadXMLData("Medicines.xml");
+    for (int i = 0; i < medicineList->Count; i++)
+        if (medicineName == medicineList[i]->name) {
+            return  medicineList[i];
+        }
+    return nullptr;
+    // TODO: Insertar una instrucción "return" aquí
 }
 
 Employee^ salesController::Controller::Login(String^ username, String^ password)
@@ -90,6 +103,56 @@ Employee^ salesController::Controller::Login(String^ username, String^ password)
     }
     return employee;
     // TODO: Insertar una instrucción "return" aquí
+}
+
+List<Sale^>^ salesController::Controller::QueryAllSales()
+{
+    saleList = (List<Sale^>^)Persistance::LoadXMLData("sales.xml");
+    return saleList;
+}
+
+int salesController::Controller::QueryLastSaleId()
+{
+    saleList = (List<Sale^>^)Persistance::LoadXMLData("sales.xml");
+    if (saleList->Count == 0) return 0;
+    else return saleList[saleList->Count - 1]->Id;
+}
+
+void salesController::Controller::RegisterSale(Sale^ sale)
+{
+    saleList->Add(sale);
+    Persistance::PersistXML("sales.xml", saleList);
+}
+
+int salesController::Controller::AddProduct_sale(Medicine^ product)
+{
+    medicineproductList->Add(product);
+    return product->id;
+}
+
+Medicine^ salesController::Controller::QueryProductById_sale(int productId)
+{
+    for (int i = 0; i < medicineproductList->Count; i++)
+        if (medicineproductList[i]->id == productId)
+            return medicineproductList[i];
+    return nullptr;
+    // TODO: Insertar una instrucción "return" aquí
+}
+
+List<Medicine^>^ salesController::Controller::QueryAllProducts_sale()
+{
+    return medicineproductList;
+    // TODO: Insertar una instrucción "return" aquí
+}
+
+int salesController::Controller::DeleteProduct_sale(int productId)
+{
+    for (int i = 0; i < medicineproductList->Count; i++)
+        if (medicineproductList[i]->id == productId) {
+            medicineproductList->RemoveAt(i);
+            return productId;
+        }
+    return 0;
 }
 
 int salesController::Controller::AddSalesman(Vendedor^ vendedor)
@@ -139,6 +202,69 @@ List<Vendedor^>^ salesController::Controller::QueryAllSalesmen()
         }*/
     }
     return activeSalesmanList;
+}
+
+int salesController::Controller::AddClient(Person^ cliente)
+{
+    ClientList->Add(cliente);
+    Persistance::PersistXML("Clientes.xml", ClientList);
+
+    return cliente->Id;
+}
+
+Person^ salesController::Controller::QueryClientById(int clienteId)
+{
+    ClientList = (List<Person^>^)Persistance::LoadXMLData("Clientes.xml");
+    for (int i = 0; i < ClientList->Count; i++)
+        //if (medicineList[i]->getId() == medicineId)
+        if (ClientList[i]->Id == clienteId)
+            return ClientList[i];
+    return nullptr;
+    // TODO: Insertar una instrucción "return" aquí
+}
+
+List<Person^>^ salesController::Controller::QueryAllClients()
+{
+    ClientList = (List<Person^>^)Persistance::LoadXMLData("Clientes.xml");
+    return ClientList;
+    // TODO: Insertar una instrucción "return" aquí
+}
+
+int salesController::Controller::UpdateClient(Person^ cliente)
+{
+    for (int i = 0; i < ClientList->Count; i++)
+        if (ClientList[i]->Id == cliente->Id) {
+            ClientList[i] = cliente;
+            //Persistance::Persist("products.txt", productList);
+            Persistance::PersistXML("Clientes.xml", ClientList);
+            //Persistance::PersistBinary("products.bin", ClientList);
+            return cliente->Id;
+        }
+    return 0;
+}
+
+int salesController::Controller::DeleteClient(int clienteId)
+{
+    for (int i = 0; i < ClientList->Count; i++)
+        if (ClientList[i]->Id == clienteId) {
+            ClientList->RemoveAt(i);
+            //Persistance::Persist("products.txt", productList);
+            Persistance::PersistXML("Clientes.xml", ClientList);
+            //Persistance::PersistBinary("products.bin", ClientList);
+            return clienteId;
+        }
+    return 0;
+}
+
+Person^ salesController::Controller::QueryClientByDocNumber(String^ docNumber)
+{
+    ClientList = (List<Person^>^)Persistance::LoadXMLData("Clientes.xml");
+    for (int i = 0; i < ClientList->Count; i++)
+        if (docNumber == ClientList[i]->DocNumber) {
+            return  ClientList[i];
+        }
+    return nullptr;
+    // TODO: Insertar una instrucción "return" aquí
 }
 
 

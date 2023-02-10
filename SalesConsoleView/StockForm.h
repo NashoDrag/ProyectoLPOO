@@ -118,6 +118,10 @@ namespace SalesConsoleView {
 
 
 
+
+
+
+
 	protected:
 
 
@@ -125,7 +129,7 @@ namespace SalesConsoleView {
 		/// <summary>
 		/// Variable del diseñador necesaria.
 		/// </summary>
-		System::ComponentModel::Container ^components;
+		System::ComponentModel::Container^ components;
 
 #pragma region Windows Form Designer generated code
 		/// <summary>
@@ -184,115 +188,129 @@ namespace SalesConsoleView {
 			// 
 			// txtStockPresentation
 			// 
-			this->txtStockPresentation->Location = System::Drawing::Point(564, 362);
+			this->txtStockPresentation->Location = System::Drawing::Point(553, 282);
+			this->txtStockPresentation->Margin = System::Windows::Forms::Padding(2);
 			this->txtStockPresentation->Name = L"txtStockPresentation";
-			this->txtStockPresentation->Size = System::Drawing::Size(261, 22);
+			this->txtStockPresentation->Size = System::Drawing::Size(197, 20);
 			this->txtStockPresentation->TabIndex = 107;
 			// 
 			// txtStockFabricacion
 			// 
-			this->txtStockFabricacion->Location = System::Drawing::Point(564, 425);
+			this->txtStockFabricacion->Location = System::Drawing::Point(536, 332);
+			this->txtStockFabricacion->Margin = System::Windows::Forms::Padding(2);
 			this->txtStockFabricacion->Name = L"txtStockFabricacion";
-			this->txtStockFabricacion->Size = System::Drawing::Size(262, 22);
+			this->txtStockFabricacion->Size = System::Drawing::Size(198, 20);
 			this->txtStockFabricacion->TabIndex = 105;
 			// 
 			// txtStockVolumen
 			// 
-			this->txtStockVolumen->Location = System::Drawing::Point(291, 368);
+			this->txtStockVolumen->Location = System::Drawing::Point(218, 299);
+			this->txtStockVolumen->Margin = System::Windows::Forms::Padding(2);
 			this->txtStockVolumen->Name = L"txtStockVolumen";
-			this->txtStockVolumen->Size = System::Drawing::Size(79, 22);
+			this->txtStockVolumen->Size = System::Drawing::Size(60, 20);
 			this->txtStockVolumen->TabIndex = 104;
 			// 
 			// txtStockPeso
 			// 
-			this->txtStockPeso->Location = System::Drawing::Point(141, 368);
+			this->txtStockPeso->Location = System::Drawing::Point(106, 299);
+			this->txtStockPeso->Margin = System::Windows::Forms::Padding(2);
 			this->txtStockPeso->Name = L"txtStockPeso";
-			this->txtStockPeso->Size = System::Drawing::Size(69, 22);
+			this->txtStockPeso->Size = System::Drawing::Size(53, 20);
 			this->txtStockPeso->TabIndex = 103;
 			// 
 			// label15
 			// 
 			this->label15->AutoSize = true;
-			this->label15->Location = System::Drawing::Point(561, 406);
+			this->label15->Location = System::Drawing::Point(579, 319);
+			this->label15->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->label15->Name = L"label15";
-			this->label15->Size = System::Drawing::Size(122, 16);
+			this->label15->Size = System::Drawing::Size(100, 13);
 			this->label15->TabIndex = 102;
 			this->label15->Text = L"Manufacturado por:";
 			// 
 			// label13
 			// 
 			this->label13->AutoSize = true;
-			this->label13->Location = System::Drawing::Point(388, 368);
+			this->label13->Location = System::Drawing::Point(422, 282);
+			this->label13->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->label13->Name = L"label13";
-			this->label13->Size = System::Drawing::Size(160, 16);
+			this->label13->Size = System::Drawing::Size(127, 13);
 			this->label13->TabIndex = 100;
 			this->label13->Text = L"Formato de presentación:";
 			// 
 			// label12
 			// 
 			this->label12->AutoSize = true;
-			this->label12->Location = System::Drawing::Point(222, 368);
+			this->label12->Location = System::Drawing::Point(166, 299);
+			this->label12->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->label12->Name = L"label12";
-			this->label12->Size = System::Drawing::Size(63, 16);
+			this->label12->Size = System::Drawing::Size(51, 13);
 			this->label12->TabIndex = 99;
 			this->label12->Text = L"Volumen:";
 			// 
 			// label11
 			// 
 			this->label11->AutoSize = true;
-			this->label11->Location = System::Drawing::Point(45, 365);
+			this->label11->Location = System::Drawing::Point(34, 297);
+			this->label11->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->label11->Name = L"label11";
-			this->label11->Size = System::Drawing::Size(71, 16);
+			this->label11->Size = System::Drawing::Size(58, 13);
 			this->label11->TabIndex = 98;
 			this->label11->Text = L"Peso neto:";
 			// 
 			// txtStockIngrediente
 			// 
-			this->txtStockIngrediente->Location = System::Drawing::Point(141, 304);
+			this->txtStockIngrediente->Location = System::Drawing::Point(106, 247);
+			this->txtStockIngrediente->Margin = System::Windows::Forms::Padding(2);
 			this->txtStockIngrediente->Multiline = true;
 			this->txtStockIngrediente->Name = L"txtStockIngrediente";
-			this->txtStockIngrediente->Size = System::Drawing::Size(379, 58);
+			this->txtStockIngrediente->Size = System::Drawing::Size(285, 48);
 			this->txtStockIngrediente->TabIndex = 97;
 			// 
 			// label10
 			// 
 			this->label10->AutoSize = true;
-			this->label10->Location = System::Drawing::Point(45, 317);
+			this->label10->Location = System::Drawing::Point(34, 258);
+			this->label10->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->label10->Name = L"label10";
-			this->label10->Size = System::Drawing::Size(84, 16);
+			this->label10->Size = System::Drawing::Size(68, 13);
 			this->label10->TabIndex = 96;
 			this->label10->Text = L"Ingredientes:";
 			// 
 			// txtStockCaracteristica
 			// 
-			this->txtStockCaracteristica->Location = System::Drawing::Point(141, 255);
+			this->txtStockCaracteristica->Location = System::Drawing::Point(106, 207);
+			this->txtStockCaracteristica->Margin = System::Windows::Forms::Padding(2);
 			this->txtStockCaracteristica->Multiline = true;
 			this->txtStockCaracteristica->Name = L"txtStockCaracteristica";
-			this->txtStockCaracteristica->Size = System::Drawing::Size(379, 43);
+			this->txtStockCaracteristica->Size = System::Drawing::Size(285, 36);
 			this->txtStockCaracteristica->TabIndex = 95;
 			// 
 			// label9
 			// 
 			this->label9->AutoSize = true;
-			this->label9->Location = System::Drawing::Point(45, 258);
+			this->label9->Location = System::Drawing::Point(34, 210);
+			this->label9->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->label9->Name = L"label9";
-			this->label9->Size = System::Drawing::Size(84, 16);
+			this->label9->Size = System::Drawing::Size(70, 13);
 			this->label9->TabIndex = 94;
 			this->label9->Text = L"Característic:";
 			// 
 			// txtStockMarca
 			// 
-			this->txtStockMarca->Location = System::Drawing::Point(141, 219);
+			this->txtStockMarca->Location = System::Drawing::Point(106, 178);
+			this->txtStockMarca->Margin = System::Windows::Forms::Padding(2);
 			this->txtStockMarca->Name = L"txtStockMarca";
-			this->txtStockMarca->Size = System::Drawing::Size(379, 22);
+			this->txtStockMarca->Size = System::Drawing::Size(285, 20);
 			this->txtStockMarca->TabIndex = 93;
 			// 
 			// label8
 			// 
 			this->label8->AutoSize = true;
-			this->label8->Location = System::Drawing::Point(45, 222);
+			this->label8->Location = System::Drawing::Point(34, 180);
+			this->label8->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->label8->Name = L"label8";
-			this->label8->Size = System::Drawing::Size(48, 16);
+			this->label8->Size = System::Drawing::Size(40, 13);
 			this->label8->TabIndex = 92;
 			this->label8->Text = L"Marca:";
 			// 
@@ -300,63 +318,64 @@ namespace SalesConsoleView {
 			// 
 			this->OptStockType->FormattingEnabled = true;
 			this->OptStockType->Items->AddRange(gcnew cli::array< System::Object^  >(3) { L"Oral", L"Inyectables", L"Uso externo, antisépticos y Desinfectantes" });
-			this->OptStockType->Location = System::Drawing::Point(141, 185);
+			this->OptStockType->Location = System::Drawing::Point(106, 150);
+			this->OptStockType->Margin = System::Windows::Forms::Padding(2);
 			this->OptStockType->Name = L"OptStockType";
-			this->OptStockType->Size = System::Drawing::Size(379, 24);
+			this->OptStockType->Size = System::Drawing::Size(285, 21);
 			this->OptStockType->TabIndex = 91;
 			// 
 			// label7
 			// 
 			this->label7->AutoSize = true;
-			this->label7->Location = System::Drawing::Point(151, 44);
+			this->label7->Location = System::Drawing::Point(113, 36);
+			this->label7->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->label7->Name = L"label7";
-			this->label7->Size = System::Drawing::Size(59, 16);
+			this->label7->Size = System::Drawing::Size(47, 13);
 			this->label7->TabIndex = 90;
 			this->label7->Text = L"Nombre:";
 			// 
 			// txtStockName
 			// 
-			this->txtStockName->Location = System::Drawing::Point(216, 44);
+			this->txtStockName->Location = System::Drawing::Point(162, 36);
+			this->txtStockName->Margin = System::Windows::Forms::Padding(2);
 			this->txtStockName->Name = L"txtStockName";
-			this->txtStockName->Size = System::Drawing::Size(304, 22);
+			this->txtStockName->Size = System::Drawing::Size(229, 20);
 			this->txtStockName->TabIndex = 89;
 			// 
 			// btnSetImage
 			// 
-			this->btnSetImage->Location = System::Drawing::Point(593, 291);
-			this->btnSetImage->Margin = System::Windows::Forms::Padding(4);
+			this->btnSetImage->Location = System::Drawing::Point(558, 210);
 			this->btnSetImage->Name = L"btnSetImage";
-			this->btnSetImage->Size = System::Drawing::Size(212, 28);
+			this->btnSetImage->Size = System::Drawing::Size(159, 23);
 			this->btnSetImage->TabIndex = 88;
 			this->btnSetImage->Text = L"Agregar imagen";
 			this->btnSetImage->UseVisualStyleBackColor = true;
 			// 
 			// btnDelete
 			// 
-			this->btnDelete->Location = System::Drawing::Point(608, 469);
-			this->btnDelete->Margin = System::Windows::Forms::Padding(4);
+			this->btnDelete->Location = System::Drawing::Point(614, 381);
 			this->btnDelete->Name = L"btnDelete";
-			this->btnDelete->Size = System::Drawing::Size(187, 28);
+			this->btnDelete->Size = System::Drawing::Size(140, 23);
 			this->btnDelete->TabIndex = 87;
 			this->btnDelete->Text = L"Eliminar";
 			this->btnDelete->UseVisualStyleBackColor = true;
+			this->btnDelete->Click += gcnew System::EventHandler(this, &StockForm::btnDelete_Click);
 			// 
 			// btnUpdate
 			// 
-			this->btnUpdate->Location = System::Drawing::Point(316, 469);
-			this->btnUpdate->Margin = System::Windows::Forms::Padding(4);
+			this->btnUpdate->Location = System::Drawing::Point(317, 381);
 			this->btnUpdate->Name = L"btnUpdate";
-			this->btnUpdate->Size = System::Drawing::Size(208, 28);
+			this->btnUpdate->Size = System::Drawing::Size(156, 23);
 			this->btnUpdate->TabIndex = 86;
 			this->btnUpdate->Text = L"Modificar";
 			this->btnUpdate->UseVisualStyleBackColor = true;
+			this->btnUpdate->Click += gcnew System::EventHandler(this, &StockForm::btnUpdate_Click);
 			// 
 			// btnAdd
 			// 
-			this->btnAdd->Location = System::Drawing::Point(48, 469);
-			this->btnAdd->Margin = System::Windows::Forms::Padding(4);
+			this->btnAdd->Location = System::Drawing::Point(36, 381);
 			this->btnAdd->Name = L"btnAdd";
-			this->btnAdd->Size = System::Drawing::Size(197, 28);
+			this->btnAdd->Size = System::Drawing::Size(148, 23);
 			this->btnAdd->TabIndex = 85;
 			this->btnAdd->Text = L"Agregar";
 			this->btnAdd->UseVisualStyleBackColor = true;
@@ -365,94 +384,84 @@ namespace SalesConsoleView {
 			// pbStockPhoto
 			// 
 			this->pbStockPhoto->BorderStyle = System::Windows::Forms::BorderStyle::Fixed3D;
-			this->pbStockPhoto->Location = System::Drawing::Point(556, 39);
-			this->pbStockPhoto->Margin = System::Windows::Forms::Padding(4);
+			this->pbStockPhoto->Location = System::Drawing::Point(536, 12);
 			this->pbStockPhoto->Name = L"pbStockPhoto";
-			this->pbStockPhoto->Size = System::Drawing::Size(269, 235);
+			this->pbStockPhoto->Size = System::Drawing::Size(203, 192);
 			this->pbStockPhoto->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
 			this->pbStockPhoto->TabIndex = 84;
 			this->pbStockPhoto->TabStop = false;
 			// 
 			// txtStockQuantity
 			// 
-			this->txtStockQuantity->Location = System::Drawing::Point(378, 156);
-			this->txtStockQuantity->Margin = System::Windows::Forms::Padding(4);
+			this->txtStockQuantity->Location = System::Drawing::Point(284, 127);
 			this->txtStockQuantity->Name = L"txtStockQuantity";
-			this->txtStockQuantity->Size = System::Drawing::Size(142, 22);
+			this->txtStockQuantity->Size = System::Drawing::Size(108, 20);
 			this->txtStockQuantity->TabIndex = 83;
 			// 
 			// txtStockPrice
 			// 
-			this->txtStockPrice->Location = System::Drawing::Point(141, 152);
-			this->txtStockPrice->Margin = System::Windows::Forms::Padding(4);
+			this->txtStockPrice->Location = System::Drawing::Point(106, 124);
 			this->txtStockPrice->Name = L"txtStockPrice";
-			this->txtStockPrice->Size = System::Drawing::Size(69, 22);
+			this->txtStockPrice->Size = System::Drawing::Size(53, 20);
 			this->txtStockPrice->TabIndex = 81;
 			// 
 			// txtStockDescription
 			// 
-			this->txtStockDescription->Location = System::Drawing::Point(141, 87);
-			this->txtStockDescription->Margin = System::Windows::Forms::Padding(4);
+			this->txtStockDescription->Location = System::Drawing::Point(106, 71);
 			this->txtStockDescription->Multiline = true;
 			this->txtStockDescription->Name = L"txtStockDescription";
-			this->txtStockDescription->Size = System::Drawing::Size(379, 56);
+			this->txtStockDescription->Size = System::Drawing::Size(285, 46);
 			this->txtStockDescription->TabIndex = 80;
 			// 
 			// txtStockId
 			// 
-			this->txtStockId->Location = System::Drawing::Point(71, 44);
-			this->txtStockId->Margin = System::Windows::Forms::Padding(4);
+			this->txtStockId->Location = System::Drawing::Point(53, 36);
 			this->txtStockId->Name = L"txtStockId";
-			this->txtStockId->Size = System::Drawing::Size(57, 22);
+			this->txtStockId->Size = System::Drawing::Size(44, 20);
 			this->txtStockId->TabIndex = 79;
 			// 
 			// label6
 			// 
 			this->label6->AutoSize = true;
-			this->label6->Location = System::Drawing::Point(288, 159);
-			this->label6->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->label6->Location = System::Drawing::Point(216, 129);
 			this->label6->Name = L"label6";
-			this->label6->Size = System::Drawing::Size(61, 16);
+			this->label6->Size = System::Drawing::Size(49, 13);
 			this->label6->TabIndex = 78;
 			this->label6->Text = L"Cantidad";
 			// 
 			// label4
 			// 
 			this->label4->AutoSize = true;
-			this->label4->Location = System::Drawing::Point(45, 152);
-			this->label4->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->label4->Location = System::Drawing::Point(34, 124);
 			this->label4->Name = L"label4";
-			this->label4->Size = System::Drawing::Size(46, 16);
+			this->label4->Size = System::Drawing::Size(37, 13);
 			this->label4->TabIndex = 76;
 			this->label4->Text = L"Precio";
 			// 
 			// label3
 			// 
 			this->label3->AutoSize = true;
-			this->label3->Location = System::Drawing::Point(45, 90);
-			this->label3->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->label3->Location = System::Drawing::Point(34, 73);
 			this->label3->Name = L"label3";
-			this->label3->Size = System::Drawing::Size(79, 16);
+			this->label3->Size = System::Drawing::Size(63, 13);
 			this->label3->TabIndex = 75;
 			this->label3->Text = L"Descripción";
 			// 
 			// label2
 			// 
 			this->label2->AutoSize = true;
-			this->label2->Location = System::Drawing::Point(45, 185);
-			this->label2->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->label2->Location = System::Drawing::Point(34, 150);
 			this->label2->Name = L"label2";
-			this->label2->Size = System::Drawing::Size(38, 16);
+			this->label2->Size = System::Drawing::Size(31, 13);
 			this->label2->TabIndex = 74;
 			this->label2->Text = L"Tipo:";
 			// 
 			// label1
 			// 
 			this->label1->AutoSize = true;
-			this->label1->Location = System::Drawing::Point(45, 44);
-			this->label1->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->label1->Location = System::Drawing::Point(34, 36);
 			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(18, 16);
+			this->label1->Size = System::Drawing::Size(16, 13);
 			this->label1->TabIndex = 73;
 			this->label1->Text = L"Id";
 			// 
@@ -463,25 +472,25 @@ namespace SalesConsoleView {
 					this->salirToolStripMenuItem
 			});
 			this->archivoToolStripMenuItem->Name = L"archivoToolStripMenuItem";
-			this->archivoToolStripMenuItem->Size = System::Drawing::Size(73, 24);
+			this->archivoToolStripMenuItem->Size = System::Drawing::Size(60, 20);
 			this->archivoToolStripMenuItem->Text = L"Archivo";
 			// 
 			// nuevoToolStripMenuItem
 			// 
 			this->nuevoToolStripMenuItem->Name = L"nuevoToolStripMenuItem";
-			this->nuevoToolStripMenuItem->Size = System::Drawing::Size(135, 26);
+			this->nuevoToolStripMenuItem->Size = System::Drawing::Size(109, 22);
 			this->nuevoToolStripMenuItem->Text = L"Nuevo";
 			// 
 			// salirToolStripMenuItem
 			// 
 			this->salirToolStripMenuItem->Name = L"salirToolStripMenuItem";
-			this->salirToolStripMenuItem->Size = System::Drawing::Size(135, 26);
+			this->salirToolStripMenuItem->Size = System::Drawing::Size(109, 22);
 			this->salirToolStripMenuItem->Text = L"Salir";
 			// 
 			// reporteToolStripMenuItem
 			// 
 			this->reporteToolStripMenuItem->Name = L"reporteToolStripMenuItem";
-			this->reporteToolStripMenuItem->Size = System::Drawing::Size(76, 24);
+			this->reporteToolStripMenuItem->Size = System::Drawing::Size(60, 20);
 			this->reporteToolStripMenuItem->Text = L"Reporte";
 			// 
 			// menuStrip1
@@ -493,7 +502,8 @@ namespace SalesConsoleView {
 			});
 			this->menuStrip1->Location = System::Drawing::Point(0, 0);
 			this->menuStrip1->Name = L"menuStrip1";
-			this->menuStrip1->Size = System::Drawing::Size(862, 28);
+			this->menuStrip1->Padding = System::Windows::Forms::Padding(4, 2, 0, 2);
+			this->menuStrip1->Size = System::Drawing::Size(788, 24);
 			this->menuStrip1->TabIndex = 0;
 			this->menuStrip1->Text = L"menuStrip1";
 			// 
@@ -504,12 +514,14 @@ namespace SalesConsoleView {
 				this->StockId, this->StockBrand,
 					this->StockDescription, this->StockDetail
 			});
-			this->dgvStock->Location = System::Drawing::Point(12, 520);
+			this->dgvStock->Location = System::Drawing::Point(11, 421);
+			this->dgvStock->Margin = System::Windows::Forms::Padding(2);
 			this->dgvStock->Name = L"dgvStock";
 			this->dgvStock->RowHeadersWidth = 51;
 			this->dgvStock->RowTemplate->Height = 24;
-			this->dgvStock->Size = System::Drawing::Size(838, 141);
+			this->dgvStock->Size = System::Drawing::Size(757, 115);
 			this->dgvStock->TabIndex = 108;
+			this->dgvStock->CellClick += gcnew System::Windows::Forms::DataGridViewCellEventHandler(this, &StockForm::dgvStock_CellClick);
 			// 
 			// StockId
 			// 
@@ -517,15 +529,15 @@ namespace SalesConsoleView {
 			this->StockId->MinimumWidth = 6;
 			this->StockId->Name = L"StockId";
 			this->StockId->ReadOnly = true;
-			this->StockId->Width = 125;
+			this->StockId->Width = 50;
 			// 
 			// StockBrand
 			// 
-			this->StockBrand->HeaderText = L"Marca";
+			this->StockBrand->HeaderText = L"Nombre";
 			this->StockBrand->MinimumWidth = 6;
 			this->StockBrand->Name = L"StockBrand";
 			this->StockBrand->ReadOnly = true;
-			this->StockBrand->Width = 125;
+			this->StockBrand->Width = 150;
 			// 
 			// StockDescription
 			// 
@@ -541,29 +553,30 @@ namespace SalesConsoleView {
 			this->StockDetail->MinimumWidth = 6;
 			this->StockDetail->Name = L"StockDetail";
 			this->StockDetail->ReadOnly = true;
-			this->StockDetail->Width = 125;
 			// 
 			// label5
 			// 
 			this->label5->AutoSize = true;
-			this->label5->Location = System::Drawing::Point(45, 412);
+			this->label5->Location = System::Drawing::Point(34, 335);
+			this->label5->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->label5->Name = L"label5";
-			this->label5->Size = System::Drawing::Size(142, 16);
+			this->label5->Size = System::Drawing::Size(115, 13);
 			this->label5->TabIndex = 110;
 			this->label5->Text = L"Fecha de vencimiento:";
 			// 
 			// dateTime
 			// 
-			this->dateTime->Location = System::Drawing::Point(216, 407);
+			this->dateTime->Location = System::Drawing::Point(162, 331);
+			this->dateTime->Margin = System::Windows::Forms::Padding(2);
 			this->dateTime->Name = L"dateTime";
-			this->dateTime->Size = System::Drawing::Size(304, 22);
+			this->dateTime->Size = System::Drawing::Size(229, 20);
 			this->dateTime->TabIndex = 111;
 			// 
 			// StockForm
 			// 
-			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
+			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(862, 673);
+			this->ClientSize = System::Drawing::Size(788, 547);
 			this->Controls->Add(this->dateTime);
 			this->Controls->Add(this->label5);
 			this->Controls->Add(this->dgvStock);
@@ -600,8 +613,10 @@ namespace SalesConsoleView {
 			this->Controls->Add(this->label1);
 			this->Controls->Add(this->menuStrip1);
 			this->MainMenuStrip = this->menuStrip1;
+			this->Margin = System::Windows::Forms::Padding(2);
 			this->Name = L"StockForm";
 			this->Text = L"StockForm";
+			this->Load += gcnew System::EventHandler(this, &StockForm::StockForm_Load);
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pbStockPhoto))->EndInit();
 			this->menuStrip1->ResumeLayout(false);
 			this->menuStrip1->PerformLayout();
@@ -613,60 +628,116 @@ namespace SalesConsoleView {
 #pragma endregion
 
 
-private: System::Void btnAdd_Click(System::Object^ sender, System::EventArgs^ e) {
-	Medicine^ medicine = gcnew Medicine();
-	medicine->id = Convert::ToInt32(txtStockId->Text);
-	medicine->name = txtStockName->Text;
-	medicine->description = txtStockDescription->Text;
-	medicine->price = Convert::ToDouble(txtStockPrice->Text);
-	medicine->quantity = Convert::ToInt32(txtStockQuantity->Text);
-	medicine->brand = txtStockMarca->Text;
-	medicine->characteristica = txtStockCaracteristica->Text;
-	medicine->Ingredients = txtStockIngrediente->Text;
-	medicine->peso = Convert::ToInt32(txtStockPeso->Text);
-	medicine->volumen = Convert::ToInt32(txtStockVolumen->Text);
-	medicine->PresentationFormat = txtStockPresentation->Text;
-	medicine->manufacturado = txtStockFabricacion->Text;
-	medicine->Status = 'A';
-	if (pbStockPhoto != nullptr && pbStockPhoto->Image != nullptr) {
-		System::IO::MemoryStream^ ms = gcnew System::IO::MemoryStream();
-		pbStockPhoto->Image->Save(ms, System::Drawing::Imaging::ImageFormat::Jpeg);
-		medicine->photo = ms->ToArray();
+	private: System::Void btnAdd_Click(System::Object^ sender, System::EventArgs^ e) {
+		Medicine^ medicine = gcnew Medicine();
+		medicine->id = Convert::ToInt32(txtStockId->Text);
+		medicine->name = txtStockName->Text;
+		medicine->description = txtStockDescription->Text;
+		medicine->price = Convert::ToDouble(txtStockPrice->Text);
+		medicine->quantity = Convert::ToInt32(txtStockQuantity->Text);
+		medicine->brand = txtStockMarca->Text;
+		medicine->characteristica = txtStockCaracteristica->Text;
+		medicine->Ingredients = txtStockIngrediente->Text;
+		medicine->peso = Convert::ToInt32(txtStockPeso->Text);
+		medicine->volumen = Convert::ToInt32(txtStockVolumen->Text);
+		medicine->PresentationFormat = txtStockPresentation->Text;
+		medicine->manufacturado = txtStockFabricacion->Text;
+		medicine->Status = 'A';
+		if (pbStockPhoto != nullptr && pbStockPhoto->Image != nullptr) {
+			System::IO::MemoryStream^ ms = gcnew System::IO::MemoryStream();
+			pbStockPhoto->Image->Save(ms, System::Drawing::Imaging::ImageFormat::Jpeg);
+			medicine->photo = ms->ToArray();
+		}
+
+		Controller::AddMedicine(medicine);
+		CleanStockMedicine();
+		ShowStockMedicine();
 	}
+		   void ShowStockMedicine() {
+			   List<Medicine^>^ myMedicineList = Controller::QueryAllMedicines();
 
-	Controller::AddMedicine(medicine);
-
-	CleanMedicine();
-	ShowMedicine();
-}
-	   void ShowMedicine() {
-		   List<Medicine^>^ myMedicineList = Controller::QueryAllMedicines();
-
-		   dgvStock->Rows->Clear();
-		   for (int i = 0; i < myMedicineList->Count; i++) {
-			   dgvStock->Rows->Add(gcnew array<String^>{
-				   "" + myMedicineList[i]->id,
-					   myMedicineList[i]->name,
-					   myMedicineList[i]->description,
-					   "" + myMedicineList[i]->quantity
-			   });
+			   dgvStock->Rows->Clear();
+			   for (int i = 0; i < myMedicineList->Count; i++) {
+				   dgvStock->Rows->Add(gcnew array<String^>{
+					   "" + myMedicineList[i]->id,
+						   myMedicineList[i]->name,
+						   myMedicineList[i]->description,
+						   "" + myMedicineList[i]->quantity
+				   });
+			   }
 		   }
-	   }
 
-	   void CleanMedicine() {
-		   txtStockId->Clear();
-		   txtStockName->Clear();
-		   txtStockDescription->Clear();
-		   txtStockPrice->Clear();
-		   txtStockQuantity->Clear();
-		   txtStockMarca->Clear();
-		   txtStockCaracteristica->Clear();
-		   txtStockIngrediente->Clear();
-		   txtStockPeso->Clear();
-		   txtStockVolumen->Clear();
-		   txtStockPresentation->Clear();
-		   txtStockFabricacion->Clear();
-		   pbStockPhoto->Image = nullptr;
-	   }
-};
-}
+		   void CleanStockMedicine() {
+			   txtStockId->Clear();
+			   txtStockName->Clear();
+			   txtStockDescription->Clear();
+			   txtStockPrice->Clear();
+			   txtStockQuantity->Clear();
+			   txtStockMarca->Clear();
+			   txtStockCaracteristica->Clear();
+			   txtStockIngrediente->Clear();
+			   txtStockPeso->Clear();
+			   txtStockVolumen->Clear();
+			   txtStockPresentation->Clear();
+			   txtStockFabricacion->Clear();
+			   pbStockPhoto->Image = nullptr;
+		   }
+	private: System::Void btnUpdate_Click(System::Object^ sender, System::EventArgs^ e) {
+		Medicine^ medicine = gcnew Medicine();
+
+		medicine->id = Convert::ToInt32(txtStockId->Text);
+		medicine->name = txtStockName->Text;
+		medicine->description = txtStockDescription->Text;
+		medicine->price = Convert::ToDouble(txtStockPrice->Text);
+		medicine->quantity = Convert::ToInt32(txtStockQuantity->Text);
+		medicine->brand = txtStockMarca->Text;
+		medicine->characteristica = txtStockCaracteristica->Text;
+		medicine->Ingredients = txtStockIngrediente->Text;
+		medicine->peso = Convert::ToInt32(txtStockPeso->Text);
+		medicine->volumen = Convert::ToInt32(txtStockVolumen->Text);
+		medicine->PresentationFormat = txtStockPresentation->Text;
+		medicine->manufacturado = txtStockFabricacion->Text;
+		medicine->Status = 'A';
+		if (pbStockPhoto != nullptr && pbStockPhoto->Image != nullptr) {
+			System::IO::MemoryStream^ ms = gcnew System::IO::MemoryStream();
+			pbStockPhoto->Image->Save(ms, System::Drawing::Imaging::ImageFormat::Jpeg);
+			medicine->photo = ms->ToArray();			
+		}
+		Controller::UpdateMedicine(medicine);
+		CleanStockMedicine();
+		ShowStockMedicine();
+	}
+	private: System::Void StockForm_Load(System::Object^ sender, System::EventArgs^ e) {
+		ShowStockMedicine();
+	}
+	private: System::Void dgvStock_CellClick(System::Object^ sender, System::Windows::Forms::DataGridViewCellEventArgs^ e) {
+		int selectedRowIndex = dgvStock->SelectedCells[0]->RowIndex;
+		int MedicineId = Convert::ToInt32(dgvStock->Rows[selectedRowIndex]->Cells[0]->Value->ToString());
+		Medicine^ med = Controller::QueryMedicineById(MedicineId);
+		//textBox2->Text = "" + p->getId();
+		txtStockId->Text = "" + med->id;
+		txtStockName->Text = " " + med->name;
+		txtStockDescription->Text = med->description;
+		txtStockQuantity->Text = " " + med->quantity;
+		txtStockPrice->Text = " " + med->price;
+		txtStockMarca->Text = med->brand;
+		txtStockCaracteristica->Text = med->characteristica;
+		txtStockIngrediente->Text = med->Ingredients;
+		txtStockPeso->Text = " " + med->peso;
+		txtStockVolumen->Text = " " + med->volumen;
+		txtStockPresentation->Text = " " + med->PresentationFormat;
+		txtStockFabricacion->Text = " " + med->manufacturado;
+
+
+	}
+	private: System::Void btnDelete_Click(System::Object^ sender, System::EventArgs^ e) {
+		if (txtStockId->Text->Trim() == "") {
+			MessageBox::Show("Debe seleccionar un MEDICAMENTO");
+			return;
+		}
+		Controller::DeleteProduct(Convert::ToInt32(txtStockId->Text->Trim()));
+		CleanStockMedicine();
+		ShowStockMedicine();
+	}
+	};
+	};

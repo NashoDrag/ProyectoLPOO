@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSale xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Sale>
+    <SaleDetails>
+      <Detalle_Pedido>
+        <Medicine>
+          <manufacturado>sgsd</manufacturado>
+          <volumen>141</volumen>
+          <peso>4</peso>
+          <characteristica>sdfsdf</characteristica>
+          <Status>65</Status>
+          <Ingredients>sdfsdf</Ingredients>
+          <PresentationFormat>rgsg</PresentationFormat>
+          <quantity>141</quantity>
+          <price>4</price>
+          <description>asdasd</description>
+          <brand>fsdfsf</brand>
+          <name>aspirina</name>
+          <id>8</id>
+        </Medicine>
+        <UnitPrice>100</UnitPrice>
+        <SubTotal>500</SubTotal>
+        <Quantity>5</Quantity>
+        <Id>1</Id>
+      </Detalle_Pedido>
+    </SaleDetails>
+    <Total>500</Total>
+    <Status>0</Status>
+    <cliente>20202208 - chriustian </cliente>
+    <Id_corporation>0</Id_corporation>
+    <Id>1</Id>
+  </Sale>
+  <Sale>
+    <SaleDetails>
+      <Detalle_Pedido>
+        <Medicine>
+          <manufacturado>sgsd</manufacturado>
+          <volumen>141</volumen>
+          <peso>4</peso>
+          <characteristica>sdfsdf</characteristica>
+          <Status>65</Status>
+          <Ingredients>sdfsdf</Ingredients>
+          <PresentationFormat>rgsg</PresentationFormat>
+          <quantity>141</quantity>
+          <price>4</price>
+          <description>asdasd</description>
+          <brand>fsdfsf</brand>
+          <name>aspirina</name>
+          <id>8</id>
+        </Medicine>
+        <UnitPrice>100</UnitPrice>
+        <SubTotal>500</SubTotal>
+        <Quantity>5</Quantity>
+        <Id>1</Id>
+      </Detalle_Pedido>
+    </SaleDetails>
+    <Total>500</Total>
+    <Status>0</Status>
+    <cliente>2542 - fernando </cliente>
+    <Id_corporation>0</Id_corporation>
+    <Id>2</Id>
+  </Sale>
+</ArrayOfSale>

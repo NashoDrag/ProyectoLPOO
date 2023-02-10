@@ -1,33 +1,93 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ArrayOfMedicine xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <Medicine>
-    <manufacturado>1</manufacturado>
-    <volumen>1</volumen>
-    <peso>1</peso>
-    <characteristica>1</characteristica>
+    <manufacturado />
+    <volumen>0</volumen>
+    <peso>0</peso>
+    <characteristica />
     <Status>65</Status>
-    <Ingredients>1</Ingredients>
-    <PresentationFormat>1</PresentationFormat>
-    <quantity>1</quantity>
-    <price>1</price>
-    <description>1</description>
-    <brand>1</brand>
-    <name>1</name>
-    <id>1</id>
+    <Ingredients />
+    <PresentationFormat />
+    <quantity>3</quantity>
+    <price>3</price>
+    <description>hola</description>
+    <brand />
+    <name> paracetamol</name>
+    <id>2</id>
   </Medicine>
   <Medicine>
-    <manufacturado>3</manufacturado>
-    <volumen>3</volumen>
-    <peso>12</peso>
-    <characteristica>1</characteristica>
+    <manufacturado> dgdg</manufacturado>
+    <volumen>5</volumen>
+    <peso>2</peso>
+    <characteristica>gdg</characteristica>
     <Status>65</Status>
-    <Ingredients>1</Ingredients>
-    <PresentationFormat>3</PresentationFormat>
-    <quantity>1</quantity>
-    <price>1</price>
-    <description>1</description>
-    <brand>1</brand>
-    <name>2</name>
-    <id>2</id>
+    <Ingredients>gdgdgd</Ingredients>
+    <PresentationFormat> dgdg</PresentationFormat>
+    <quantity>5</quantity>
+    <price>4</price>
+    <description>dsadasd</description>
+    <brand>dfgdg</brand>
+    <name> simvastanina</name>
+    <id>3</id>
+  </Medicine>
+  <Medicine>
+    <manufacturado>sdfsdf</manufacturado>
+    <volumen>20</volumen>
+    <peso>2</peso>
+    <characteristica>sdfdsf</characteristica>
+    <Status>65</Status>
+    <Ingredients>dfsdf</Ingredients>
+    <PresentationFormat>dsfsdf</PresentationFormat>
+    <quantity>2</quantity>
+    <price>5</price>
+    <description>zzzzz</description>
+    <brand>sdfsdf</brand>
+    <name>viagra</name>
+    <id>5</id>
+  </Medicine>
+  <Medicine>
+    <manufacturado>sgsd</manufacturado>
+    <volumen>141</volumen>
+    <peso>4</peso>
+    <characteristica>sdfsdf</characteristica>
+    <Status>65</Status>
+    <Ingredients>sdfsdf</Ingredients>
+    <PresentationFormat>rgsg</PresentationFormat>
+    <quantity>141</quantity>
+    <price>4</price>
+    <description>asdasd</description>
+    <brand>fsdfsf</brand>
+    <name>aspirina</name>
+    <id>8</id>
+  </Medicine>
+  <Medicine>
+    <manufacturado>pablo escobar</manufacturado>
+    <volumen>3</volumen>
+    <peso>20</peso>
+    <characteristica>adasd</characteristica>
+    <Status>65</Status>
+    <Ingredients>dasda</Ingredients>
+    <PresentationFormat>asdad</PresentationFormat>
+    <quantity>10</quantity>
+    <price>100</price>
+    <description>asdads</description>
+    <brand>zzzzz</brand>
+    <name>heroina</name>
+    <id>8</id>
+  </Medicine>
+  <Medicine>
+    <manufacturado>adasd</manufacturado>
+    <volumen>5</volumen>
+    <peso>4</peso>
+    <characteristica>asdasd</characteristica>
+    <Status>65</Status>
+    <Ingredients>asdasda</Ingredients>
+    <PresentationFormat>asdasd</PresentationFormat>
+    <quantity>32</quantity>
+    <price>3</price>
+    <description>zzzz</description>
+    <brand>asdasd</brand>
+    <name>droga</name>
+    <id>5</id>
   </Medicine>
 </ArrayOfMedicine>
