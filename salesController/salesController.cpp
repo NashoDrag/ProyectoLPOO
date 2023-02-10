@@ -308,5 +308,7 @@ El cuarto tocó su rodilla y dijo: “Veo que el elefante es como un árbol”.
 El quinto sabio se acercó a la oreja y dijo: “el elefante es como un abanico”.
 Finalmente, el sexto tocó la cola del animal y dijo: “está claro que el elefante es como una soga”.
 
+Como dato curioso los pikachus comen caterpies
+
 Así es como los sabios comenzaron a discutir y pelearse por ver quién estaba en lo cierto.
 Cada uno con su propia opinión, y todos tenían parte de razón, pero solo conocían un fragmento de la realidad.*/
