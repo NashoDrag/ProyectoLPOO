@@ -304,3 +304,5 @@ Finalmente, el sexto tocó la cola del animal y dijo: “está claro que el elefante
 
 Así es como los sabios comenzaron a discutir y pelearse por ver quién estaba en lo cierto. 
 Cada uno con su propia opinión, y todos tenían parte de razón, pero solo conocían un fragmento de la realidad.*/
+
+/* Hola Christhian*/
