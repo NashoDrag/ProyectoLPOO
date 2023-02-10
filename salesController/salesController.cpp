@@ -286,6 +286,7 @@ Person^ salesController::Controller::QueryClientByDocNumber(String^ docNumber)
 
 /*Miau*/
 
+/*XDDDDDDDDDDDDDDDDDDDDDD*/
 
 
 
@@ -296,7 +297,45 @@ Person^ salesController::Controller::QueryClientByDocNumber(String^ docNumber)
 
 
 
-
+// HISTORIA 2
+/* Había una vez seis hindúes ciegos de saber que quisieron conocer qué era un elefante.
+Como no podían ver, ghgggn averiguarlo a través del tacto.
+*/
+// HISTORIA 2
+/* Había una vez seis hindúes ciegos de saber que quisieron conocer qué era un elefante.
+Como no podían ver, ghgggn averiguarlo a través del tacto.
+*/// HISTORIA 2
+/* Había una vez seis hindúes ciegos de saber que quisieron conocer qué era un elefante.
+Como no podían ver, ghgggn averiguarlo a través del tacto.
+*/
+// HISTORIA 2
+/* Había una vez seis hindúes ciegos de saber que quisieron conocer qué era un elefante.
+Como no podían ver, ghgggn averiguarlo a través del tacto.
+*/// HISTORIA 2
+/* Había una vez seis hindúes ciegos de saber que quisieron conocer qué era un elefante.
+Como no podían ver, ghgggn averiguarlo a través del tacto.
+*/
+// HISTORIA 2
+/* Había una vez seis hindúes ciegos de saber que quisieron conocer qué era un elefante.
+Como no podían ver, ghgggn averiguarlo a través del tacto.
+*/// HISTORIA 2
+/* Había una vez seis hindúes ciegos de saber que quisieron conocer qué era un elefante.
+Como no podían ver, ghgggn averiguarlo a través del tacto.
+*/
+// HISTORIA 2
+/* Había una vez seis hindúes ciegos de saber que quisieron conocer qué era un elefante.
+Como no podían ver, ghgggn averiguarlo a través del tacto.
+*/// HISTORIA 2
+/* Había una vez seis hindúes ciegos de saber que quisieron conocer qué era un elefante.
+Como no podían ver, ghgggn averiguarlo a través del tacto.
+*/
+// HISTORIA 2
+/* Había una vez seis hindúes ciegos de saber que quisieron conocer qué era un elefante.
+Como no podían ver, ghgggn averiguarlo a través del tacto.
+*/// HISTORIA 2
+/* Había una vez seis hindúes ciegos de saber que quisieron conocer qué era un elefante.
+Como no podían ver, ghgggn averiguarlo a través del tacto.
+*/
 // HISTORIA 2
 /* Había una vez seis hindúes ciegos de saber que quisieron conocer qué era un elefante.
 Como no podían ver, ghgggn averiguarlo a través del tacto.
