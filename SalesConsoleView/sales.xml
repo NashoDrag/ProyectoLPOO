@@ -60,4 +60,34 @@
     <Id_corporation>0</Id_corporation>
     <Id>2</Id>
   </Sale>
+  <Sale>
+    <SaleDetails>
+      <Detalle_Pedido>
+        <Medicine>
+          <manufacturado>sdfsdf</manufacturado>
+          <volumen>20</volumen>
+          <peso>2</peso>
+          <characteristica>sdfdsf</characteristica>
+          <Status>65</Status>
+          <Ingredients>dfsdf</Ingredients>
+          <PresentationFormat>dsfsdf</PresentationFormat>
+          <quantity>2</quantity>
+          <price>5</price>
+          <description>zzzzz</description>
+          <brand>sdfsdf</brand>
+          <name>viagra</name>
+          <id>5</id>
+        </Medicine>
+        <UnitPrice>3</UnitPrice>
+        <SubTotal>1200</SubTotal>
+        <Quantity>400</Quantity>
+        <Id>1</Id>
+      </Detalle_Pedido>
+    </SaleDetails>
+    <Total>1200</Total>
+    <Status>0</Status>
+    <cliente>2542 - fernando </cliente>
+    <Id_corporation>0</Id_corporation>
+    <Id>3</Id>
+  </Sale>
 </ArrayOfSale>
