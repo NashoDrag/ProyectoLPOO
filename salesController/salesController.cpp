@@ -7,7 +7,7 @@ int salesController::Controller::AddMedicine(Medicine^ medicine)
 {
     medicineList->Add(medicine);
 
-    
+    //return medicine->getId();
     Persistance::PersistXML("Medicines.xml", medicineList);
 
     return medicine->id;
@@ -25,6 +25,8 @@ Medicine^ salesController::Controller::QueryMedicineById(int medicineId)
     return nullptr;
 }
 
+
+
 List<Medicine^>^ salesController::Controller::QueryAllMedicines()
 {
     medicineList = (List<Medicine^>^)Persistance::LoadXMLData("Medicines.xml");
@@ -41,8 +43,20 @@ int salesController::Controller::UpdateMedicine(Medicine^ medicine)
         }
     return 0;
 }
+List<Medicine^>^ salesController::Controller::QueryMedicinesByNameOrDescription(String^ value)
+{
+    medicineList = (List<Medicine^>^)Persistance::LoadXMLData("Medicines.xml");
+    List<Medicine^>^ newMedicineList = gcnew List<Medicine^>();
+    for (int i = 0; i < medicineList->Count; i++) {
+        if (medicineList[i]->name->Contains(value) || medicineList[i]->description->Contains(value))
+            newMedicineList->Add(medicineList[i]);
+    }
+    return newMedicineList;
+}
 
-int salesController::Controller::DeleteProduct(int medicineId)
+
+
+int salesController::Controller::DeleteMedicine(int medicineId)
 {
     for (int i = 0; i < medicineList->Count; i++)
         if (medicineList[i]->id == medicineId) {

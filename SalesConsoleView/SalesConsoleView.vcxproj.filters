@@ -41,10 +41,13 @@
     <ClInclude Include="ProductSearchForm.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
-    <ClInclude Include="StockForm.h">
+    <ClInclude Include="WarehouseManager.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
-    <ClInclude Include="OrderStatusForm.h">
+    <ClInclude Include="WarehouseManagerContactsForm.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
+    <ClInclude Include="WarehouseBuys.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
   </ItemGroup>
@@ -73,10 +76,13 @@
     <ClCompile Include="ProductSearchForm.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
-    <ClCompile Include="StockForm.cpp">
+    <ClCompile Include="WarehouseBuys.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
-    <ClCompile Include="OrderStatusForm.cpp">
+    <ClCompile Include="WarehouseManager.cpp">
+      <Filter>Archivos de origen</Filter>
+    </ClCompile>
+    <ClCompile Include="WarehouseManagerContactsForm.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
   </ItemGroup>
