@@ -300,16 +300,4 @@ Person^ salesController::Controller::QueryClientByDocNumber(String^ docNumber)
 // HISTORIA 2
 /* Había una vez seis hindúes ciegos de saber que quisieron conocer qué era un elefante.
 Como no podían ver, ghgggn averiguarlo a través del tacto.
-El primero en indagar, llegó junto al elefante y se chocó con su duro lomo y dijo:
-“es duro y liso como una pared”. El segundo, tocó el colmillo, y gritó: “ya veo, el elefante
-es tan agudo como una lanza”.
-El tercer hombre tocó la trompa y dijo: “Ya sé, el elefante es como una serpiente”.
-El cuarto tocó su rodilla y dijo: “Veo que el elefante es como un árbol”.
-El quinto sabio se acercó a la oreja y dijo: “el elefante es como un abanico”.
-Finalmente, el sexto tocó la cola del animal y dijo: “está claro que el elefante es como una soga”.
-
-Como dato curioso los pikachus comen caterpies
-
-Así es como los sabios comenzaron a discutir y pelearse por ver quién estaba en lo cierto.
-Cada uno con su propia opinión, y todos tenían parte de razón, pero solo conocían un fragmento de la realidad.
-ggggg*/
+*/
