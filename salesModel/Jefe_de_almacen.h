@@ -13,6 +13,8 @@ namespace salesModel {
 	public:
 		property String^ FirstName;
 		property String^ LastName;
+		property int salary;
+		property int salaryId;
 	};
 
 

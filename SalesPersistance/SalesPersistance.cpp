@@ -24,6 +24,10 @@ void SalesPersistance::Persistance::PersistXML(String^ fileName, Object^ persist
             XmlSerializer^ serializadorXML = gcnew XmlSerializer(List<String^>::typeid);
             serializadorXML->Serialize(output, persistObject);
         }
+        if (persistObject->GetType() == List<Industria_Proveedora^>::typeid) {
+            XmlSerializer^ serializadorXML = gcnew XmlSerializer(List<Industria_Proveedora^>::typeid);
+            serializadorXML->Serialize(output, persistObject);
+        }
     }
     catch (Exception^ ex) {
         throw ex;
@@ -54,6 +58,13 @@ Object^ SalesPersistance::Persistance::LoadXMLData(String^ fileName)
             if (File::Exists(fileName)) {
                 serializadorXML = gcnew XmlSerializer(List<String^>::typeid);
                 res = (List<String^>^)serializadorXML->Deserialize(sr);
+            }
+        }
+        if (fileName->Equals("WarhouseManagerContacts.xml")) {
+            res = gcnew List<Industria_Proveedora^>();
+            if (File::Exists(fileName)) {
+                serializadorXML = gcnew XmlSerializer(List<Industria_Proveedora^>::typeid);
+                res = (List<Industria_Proveedora^>^)serializadorXML->Deserialize(sr);
             }
         }
     }
