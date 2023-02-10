@@ -72,10 +72,9 @@ namespace SalesConsoleView {
 			// UserName
 			// 
 			this->UserName->AutoSize = true;
-			this->UserName->Location = System::Drawing::Point(40, 16);
-			this->UserName->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
+			this->UserName->Location = System::Drawing::Point(53, 20);
 			this->UserName->Name = L"UserName";
-			this->UserName->Size = System::Drawing::Size(58, 13);
+			this->UserName->Size = System::Drawing::Size(73, 16);
 			this->UserName->TabIndex = 0;
 			this->UserName->Text = L"Username:";
 			this->UserName->Click += gcnew System::EventHandler(this, &LoginForm::label1_Click);
@@ -83,36 +82,36 @@ namespace SalesConsoleView {
 			// label2
 			// 
 			this->label2->AutoSize = true;
-			this->label2->Location = System::Drawing::Point(40, 46);
-			this->label2->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
+			this->label2->Location = System::Drawing::Point(53, 57);
 			this->label2->Name = L"label2";
-			this->label2->Size = System::Drawing::Size(56, 13);
+			this->label2->Size = System::Drawing::Size(70, 16);
 			this->label2->TabIndex = 1;
 			this->label2->Text = L"Password:";
 			// 
 			// txtUsername
 			// 
-			this->txtUsername->Location = System::Drawing::Point(114, 16);
-			this->txtUsername->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->txtUsername->Location = System::Drawing::Point(152, 20);
+			this->txtUsername->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->txtUsername->Name = L"txtUsername";
-			this->txtUsername->Size = System::Drawing::Size(163, 20);
+			this->txtUsername->Size = System::Drawing::Size(216, 22);
 			this->txtUsername->TabIndex = 2;
 			this->txtUsername->TextChanged += gcnew System::EventHandler(this, &LoginForm::txtUsername_TextChanged);
 			// 
 			// txtPassword
 			// 
-			this->txtPassword->Location = System::Drawing::Point(114, 44);
-			this->txtPassword->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->txtPassword->Location = System::Drawing::Point(152, 54);
+			this->txtPassword->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->txtPassword->Name = L"txtPassword";
-			this->txtPassword->Size = System::Drawing::Size(163, 20);
+			this->txtPassword->PasswordChar = '*';
+			this->txtPassword->Size = System::Drawing::Size(216, 22);
 			this->txtPassword->TabIndex = 3;
 			// 
 			// btnLoginFormAcept
 			// 
-			this->btnLoginFormAcept->Location = System::Drawing::Point(51, 77);
-			this->btnLoginFormAcept->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->btnLoginFormAcept->Location = System::Drawing::Point(68, 95);
+			this->btnLoginFormAcept->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->btnLoginFormAcept->Name = L"btnLoginFormAcept";
-			this->btnLoginFormAcept->Size = System::Drawing::Size(69, 22);
+			this->btnLoginFormAcept->Size = System::Drawing::Size(92, 27);
 			this->btnLoginFormAcept->TabIndex = 4;
 			this->btnLoginFormAcept->Text = L"Aceptar";
 			this->btnLoginFormAcept->UseVisualStyleBackColor = true;
@@ -120,10 +119,10 @@ namespace SalesConsoleView {
 			// 
 			// btnLoginFormCancel
 			// 
-			this->btnLoginFormCancel->Location = System::Drawing::Point(206, 77);
-			this->btnLoginFormCancel->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->btnLoginFormCancel->Location = System::Drawing::Point(275, 95);
+			this->btnLoginFormCancel->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->btnLoginFormCancel->Name = L"btnLoginFormCancel";
-			this->btnLoginFormCancel->Size = System::Drawing::Size(69, 22);
+			this->btnLoginFormCancel->Size = System::Drawing::Size(92, 27);
 			this->btnLoginFormCancel->TabIndex = 5;
 			this->btnLoginFormCancel->Text = L"Cancelar";
 			this->btnLoginFormCancel->UseVisualStyleBackColor = true;
@@ -131,9 +130,9 @@ namespace SalesConsoleView {
 			// 
 			// LoginForm
 			// 
-			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
+			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(317, 111);
+			this->ClientSize = System::Drawing::Size(423, 137);
 			this->ControlBox = false;
 			this->Controls->Add(this->btnLoginFormCancel);
 			this->Controls->Add(this->btnLoginFormAcept);
@@ -141,7 +140,7 @@ namespace SalesConsoleView {
 			this->Controls->Add(this->txtUsername);
 			this->Controls->Add(this->label2);
 			this->Controls->Add(this->UserName);
-			this->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->Name = L"LoginForm";
 			this->Text = L"Autenticacion de usuario";
 			this->Load += gcnew System::EventHandler(this, &LoginForm::LoginForm_Load);

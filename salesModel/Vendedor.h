@@ -3,7 +3,7 @@
  */
 
 
-
+#pragma once
 #include "Employee.h"
 
 namespace salesModel {

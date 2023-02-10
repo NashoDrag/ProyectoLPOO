@@ -16,13 +16,15 @@ namespace SalesConsoleView {
 	/// </summary>
 	public ref class ProductSearchForm : public System::Windows::Forms::Form
 	{
+		Form^ refForm;
 	public:
-		ProductSearchForm(void)
+		ProductSearchForm(Form^ form)
 		{
 			InitializeComponent();
 			//
 			//TODO: agregar código de constructor aquí
 			//
+			refForm = form;
 		}
 
 	protected:
@@ -57,6 +59,7 @@ namespace SalesConsoleView {
 	private: System::Windows::Forms::Button^ button1;
 	private: System::Windows::Forms::Button^ button2;
 	private: System::Windows::Forms::Button^ button3;
+	private: System::Windows::Forms::Button^ button4;
 
 	private:
 		/// <summary>
@@ -87,6 +90,7 @@ namespace SalesConsoleView {
 			this->button1 = (gcnew System::Windows::Forms::Button());
 			this->button2 = (gcnew System::Windows::Forms::Button());
 			this->button3 = (gcnew System::Windows::Forms::Button());
+			this->button4 = (gcnew System::Windows::Forms::Button());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->BeginInit();
 			this->SuspendLayout();
 			// 
@@ -133,6 +137,7 @@ namespace SalesConsoleView {
 			this->dataGridView1->Name = L"dataGridView1";
 			this->dataGridView1->Size = System::Drawing::Size(443, 140);
 			this->dataGridView1->TabIndex = 4;
+			this->dataGridView1->CellClick += gcnew System::Windows::Forms::DataGridViewCellEventHandler(this, &ProductSearchForm::dataGridView1_CellClick);
 			// 
 			// id_col
 			// 
@@ -217,11 +222,22 @@ namespace SalesConsoleView {
 			this->button3->Text = L"Eliminar";
 			this->button3->UseVisualStyleBackColor = true;
 			// 
+			// button4
+			// 
+			this->button4->Location = System::Drawing::Point(442, 187);
+			this->button4->Name = L"button4";
+			this->button4->Size = System::Drawing::Size(92, 25);
+			this->button4->TabIndex = 12;
+			this->button4->Text = L"buscar";
+			this->button4->UseVisualStyleBackColor = true;
+			this->button4->Click += gcnew System::EventHandler(this, &ProductSearchForm::button4_Click);
+			// 
 			// ProductSearchForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(556, 379);
+			this->Controls->Add(this->button4);
 			this->Controls->Add(this->button3);
 			this->Controls->Add(this->button2);
 			this->Controls->Add(this->button1);
@@ -244,6 +260,7 @@ namespace SalesConsoleView {
 		}
 #pragma endregion
 	private: System::Void ProductSearchForm_Load(System::Object^ sender, System::EventArgs^ e) {
+		//ShowMedicines();
 	}
 	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
 		Medicine^ medicine = gcnew Medicine();
@@ -251,7 +268,7 @@ namespace SalesConsoleView {
 		medicine->id = Int32::Parse(textid->Text);
 		medicine->name = textname->Text;
 		medicine->price = Int32::Parse(textprice->Text);
-		medicine->stock = Int32::Parse(textstock->Text);
+		medicine->quantity = Int32::Parse(textstock->Text);
 		Controller::AddMedicine(medicine);
 		CleanControls();
 		ShowMedicines();
@@ -265,8 +282,7 @@ namespace SalesConsoleView {
 					   "" + myMedicineList[i]->id,
 						   myMedicineList[i]->name,
 						   "" + myMedicineList[i]->price,
-						   "" + myMedicineList[i]->stock
-
+						   "" + myMedicineList[i]->quantity
 				   });
 			   }
 		   }
@@ -278,6 +294,11 @@ namespace SalesConsoleView {
 			   textstock->Clear();
 
 		   }
-	};
+	private: System::Void dataGridView1_CellClick(System::Object^ sender,
+		System::Windows::Forms::DataGridViewCellEventArgs^ e);
+	private: System::Void button4_Click(System::Object^ sender, System::EventArgs^ e) {
+		ShowMedicines();
+	}
+};
 }
 

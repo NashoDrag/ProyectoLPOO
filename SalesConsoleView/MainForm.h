@@ -72,6 +72,12 @@ namespace SalesConsoleView {
 
 
 
+
+
+
+
+
+
 	private:
 		/// <summary>
 		/// Variable del diseñador necesaria.
@@ -87,6 +93,7 @@ namespace SalesConsoleView {
 		{
 			this->menuStrip1 = (gcnew System::Windows::Forms::MenuStrip());
 			this->archivoToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->salirToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->medicamentosToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->mantenimientoToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->pedidosToolStripMenuItem1 = (gcnew System::Windows::Forms::ToolStripMenuItem());
@@ -122,9 +129,17 @@ namespace SalesConsoleView {
 			// 
 			// archivoToolStripMenuItem
 			// 
+			this->archivoToolStripMenuItem->DropDownItems->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(1) { this->salirToolStripMenuItem });
 			this->archivoToolStripMenuItem->Name = L"archivoToolStripMenuItem";
 			this->archivoToolStripMenuItem->Size = System::Drawing::Size(88, 29);
 			this->archivoToolStripMenuItem->Text = L"Archivo";
+			// 
+			// salirToolStripMenuItem
+			// 
+			this->salirToolStripMenuItem->Name = L"salirToolStripMenuItem";
+			this->salirToolStripMenuItem->Size = System::Drawing::Size(121, 26);
+			this->salirToolStripMenuItem->Text = L"Salir";
+			this->salirToolStripMenuItem->Click += gcnew System::EventHandler(this, &MainForm::salirToolStripMenuItem_Click);
 			// 
 			// medicamentosToolStripMenuItem
 			// 
@@ -242,6 +257,7 @@ namespace SalesConsoleView {
 			this->estadoDePedidosToolStripMenuItem->Name = L"estadoDePedidosToolStripMenuItem";
 			this->estadoDePedidosToolStripMenuItem->Size = System::Drawing::Size(273, 34);
 			this->estadoDePedidosToolStripMenuItem->Text = L"Estado de Pedidos";
+			this->estadoDePedidosToolStripMenuItem->Click += gcnew System::EventHandler(this, &MainForm::estadoDePedidosToolStripMenuItem_Click);
 			// 
 			// MainForm
 			// 
@@ -273,7 +289,7 @@ private: System::Void ventaToolStripMenuItem_Click(System::Object^ sender, Syste
 	saleForm->Show();
 }
 private: System::Void informeToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
-	ProductSearchForm^ productsearchform = gcnew ProductSearchForm();
+	ProductSearchForm^ productsearchform = gcnew ProductSearchForm(this);
 	productsearchform->MdiParent = this;
 	productsearchform->Show();
 }

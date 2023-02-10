@@ -8,6 +8,9 @@ namespace SalesConsoleView {
 	using namespace System::Windows::Forms;
 	using namespace System::Data;
 	using namespace System::Drawing;
+	using namespace salesModel;
+	using namespace salesController;
+	using namespace System::Collections::Generic;
 
 	/// <summary>
 	/// Resumen de CLIENTES_REGISTRADOS
@@ -34,7 +37,9 @@ namespace SalesConsoleView {
 				delete components;
 			}
 		}
-	private: System::Windows::Forms::DataGridView^ dataGridView1;
+	private: System::Windows::Forms::DataGridView^ dgvclientes;
+	protected:
+
 	protected:
 	private: System::Windows::Forms::DataGridViewTextBoxColumn^ DNI_COLUMNA;
 	private: System::Windows::Forms::DataGridViewTextBoxColumn^ NOMBRE_COLUM;
@@ -56,27 +61,28 @@ namespace SalesConsoleView {
 		/// </summary>
 		void InitializeComponent(void)
 		{
-			this->dataGridView1 = (gcnew System::Windows::Forms::DataGridView());
+			this->dgvclientes = (gcnew System::Windows::Forms::DataGridView());
 			this->DNI_COLUMNA = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			this->NOMBRE_COLUM = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			this->EMAIL_COLUMNA = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			this->PHONE_COLUMNA = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			this->label1 = (gcnew System::Windows::Forms::Label());
 			this->textBox1 = (gcnew System::Windows::Forms::TextBox());
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dgvclientes))->BeginInit();
 			this->SuspendLayout();
 			// 
-			// dataGridView1
+			// dgvclientes
 			// 
-			this->dataGridView1->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
-			this->dataGridView1->Columns->AddRange(gcnew cli::array< System::Windows::Forms::DataGridViewColumn^  >(4) {
+			this->dgvclientes->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
+			this->dgvclientes->Columns->AddRange(gcnew cli::array< System::Windows::Forms::DataGridViewColumn^  >(4) {
 				this->DNI_COLUMNA,
 					this->NOMBRE_COLUM, this->EMAIL_COLUMNA, this->PHONE_COLUMNA
 			});
-			this->dataGridView1->Location = System::Drawing::Point(12, 31);
-			this->dataGridView1->Name = L"dataGridView1";
-			this->dataGridView1->Size = System::Drawing::Size(893, 308);
-			this->dataGridView1->TabIndex = 0;
+			this->dgvclientes->Location = System::Drawing::Point(12, 31);
+			this->dgvclientes->Name = L"dgvclientes";
+			this->dgvclientes->Size = System::Drawing::Size(893, 308);
+			this->dgvclientes->TabIndex = 0;
+			this->dgvclientes->CellContentClick += gcnew System::Windows::Forms::DataGridViewCellEventHandler(this, &CLIENTES_REGISTRADOS::dgvclientes_CellContentClick);
 			// 
 			// DNI_COLUMNA
 			// 
@@ -125,14 +131,41 @@ namespace SalesConsoleView {
 			this->ClientSize = System::Drawing::Size(927, 396);
 			this->Controls->Add(this->textBox1);
 			this->Controls->Add(this->label1);
-			this->Controls->Add(this->dataGridView1);
+			this->Controls->Add(this->dgvclientes);
 			this->Name = L"CLIENTES_REGISTRADOS";
 			this->Text = L"CLIENTES_REGISTRADOS";
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->EndInit();
+			this->Load += gcnew System::EventHandler(this, &CLIENTES_REGISTRADOS::CLIENTES_REGISTRADOS_Load);
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dgvclientes))->EndInit();
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
 		}
 #pragma endregion
-	};
+
+		void ShowClientesRegistrados() {
+			List<Person^>^ myClientesList = Controller::QueryAllClients();
+
+			dgvclientes->Rows->Clear();
+			for (int i = 0; i < myClientesList->Count; i++) {
+				dgvclientes->Rows->Add(gcnew array<String^>{
+					"" + myClientesList[i]->DocNumber,
+						myClientesList[i]->Name,
+						"" + myClientesList[i]->Email,
+						"" + myClientesList[i]->PhoneNumber
+
+				});
+			}
+
+
+		}
+	private: System::Void CLIENTES_REGISTRADOS_Load(System::Object^ sender, System::EventArgs^ e) {
+		
+		//CleanControls_sale_form();
+		ShowClientesRegistrados();
+	}
+		   
+		   
+private: System::Void dgvclientes_CellContentClick(System::Object^ sender, System::Windows::Forms::DataGridViewCellEventArgs^ e) {
+}
+};
 }

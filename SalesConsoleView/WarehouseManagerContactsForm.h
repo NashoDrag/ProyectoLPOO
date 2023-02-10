@@ -1,4 +1,5 @@
 #pragma once
+#include "WarehouseManager.h"
 
 namespace SalesConsoleView {
 
@@ -19,7 +20,6 @@ namespace SalesConsoleView {
 	{
 		Form^ refForm; //Variable de instancia
 	public:
-		WarehouseManagerContactsForm(Form^ form)
 		{
 			InitializeComponent();
 			//
