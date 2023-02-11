@@ -24,6 +24,14 @@ void SalesPersistance::Persistance::PersistXML(String^ fileName, Object^ persist
             XmlSerializer^ serializadorXML = gcnew XmlSerializer(List<String^>::typeid);
             serializadorXML->Serialize(output, persistObject);
         }
+        if (persistObject->GetType() == List<Person^>::typeid) {
+            XmlSerializer^ serializadorXML = gcnew XmlSerializer(List<Person^>::typeid);
+            serializadorXML->Serialize(output, persistObject);
+        }
+        if (persistObject->GetType() == List<Sale^>::typeid) {
+            XmlSerializer^ serializadorXML = gcnew XmlSerializer(List<Sale^>::typeid);
+            serializadorXML->Serialize(output, persistObject);
+        }
     }
     catch (Exception^ ex) {
         throw ex;
@@ -54,6 +62,20 @@ Object^ SalesPersistance::Persistance::LoadXMLData(String^ fileName)
             if (File::Exists(fileName)) {
                 serializadorXML = gcnew XmlSerializer(List<String^>::typeid);
                 res = (List<String^>^)serializadorXML->Deserialize(sr);
+            }
+        }
+        if (fileName->Equals("Clientes.xml")) {
+            res = gcnew List<Person^>();
+            if (File::Exists(fileName)) {
+                serializadorXML = gcnew XmlSerializer(List<Person^>::typeid);
+                res = (List<Person^>^)serializadorXML->Deserialize(sr);
+            }
+        }
+        if (fileName->Equals("sales.xml")) {
+            res = gcnew List<Sale^>();
+            if (File::Exists(fileName)) {
+                serializadorXML = gcnew XmlSerializer(List<Sale^>::typeid);
+                res = (List<Sale^>^)serializadorXML->Deserialize(sr);
             }
         }
     }

@@ -48,10 +48,10 @@ namespace SalesConsoleView {
 	private: System::Windows::Forms::DataGridViewTextBoxColumn^ NAMECOL;
 	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Precio_col;
 	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Stock_col;
-	private: System::Windows::Forms::Label^ label3;
-	private: System::Windows::Forms::Label^ label4;
-	private: System::Windows::Forms::TextBox^ textprice;
-	private: System::Windows::Forms::TextBox^ textstock;
+
+
+
+
 
 
 	private: System::Windows::Forms::Button^ button1;
@@ -80,10 +80,6 @@ namespace SalesConsoleView {
 			this->NAMECOL = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			this->Precio_col = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			this->Stock_col = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-			this->label3 = (gcnew System::Windows::Forms::Label());
-			this->label4 = (gcnew System::Windows::Forms::Label());
-			this->textprice = (gcnew System::Windows::Forms::TextBox());
-			this->textstock = (gcnew System::Windows::Forms::TextBox());
 			this->button1 = (gcnew System::Windows::Forms::Button());
 			this->button2 = (gcnew System::Windows::Forms::Button());
 			this->button3 = (gcnew System::Windows::Forms::Button());
@@ -93,7 +89,7 @@ namespace SalesConsoleView {
 			// label1
 			// 
 			this->label1->AutoSize = true;
-			this->label1->Location = System::Drawing::Point(93, 34);
+			this->label1->Location = System::Drawing::Point(93, 37);
 			this->label1->Name = L"label1";
 			this->label1->Size = System::Drawing::Size(24, 13);
 			this->label1->TabIndex = 0;
@@ -102,11 +98,11 @@ namespace SalesConsoleView {
 			// label2
 			// 
 			this->label2->AutoSize = true;
-			this->label2->Location = System::Drawing::Point(12, 73);
+			this->label2->Location = System::Drawing::Point(12, 83);
 			this->label2->Name = L"label2";
-			this->label2->Size = System::Drawing::Size(105, 13);
+			this->label2->Size = System::Drawing::Size(108, 13);
 			this->label2->TabIndex = 1;
-			this->label2->Text = L"Nombre/Descripcion";
+			this->label2->Text = L"Nombre/Descripcion:";
 			// 
 			// textid
 			// 
@@ -117,7 +113,7 @@ namespace SalesConsoleView {
 			// 
 			// textname
 			// 
-			this->textname->Location = System::Drawing::Point(133, 70);
+			this->textname->Location = System::Drawing::Point(133, 80);
 			this->textname->Name = L"textname";
 			this->textname->Size = System::Drawing::Size(233, 20);
 			this->textname->TabIndex = 3;
@@ -129,7 +125,7 @@ namespace SalesConsoleView {
 				this->id_col,
 					this->NAMECOL, this->Precio_col, this->Stock_col
 			});
-			this->dataGridView1->Location = System::Drawing::Point(15, 218);
+			this->dataGridView1->Location = System::Drawing::Point(12, 172);
 			this->dataGridView1->Name = L"dataGridView1";
 			this->dataGridView1->Size = System::Drawing::Size(443, 140);
 			this->dataGridView1->TabIndex = 4;
@@ -157,45 +153,13 @@ namespace SalesConsoleView {
 			this->Stock_col->Name = L"Stock_col";
 			this->Stock_col->Width = 50;
 			// 
-			// label3
-			// 
-			this->label3->AutoSize = true;
-			this->label3->Location = System::Drawing::Point(82, 105);
-			this->label3->Name = L"label3";
-			this->label3->Size = System::Drawing::Size(37, 13);
-			this->label3->TabIndex = 5;
-			this->label3->Text = L"Precio";
-			// 
-			// label4
-			// 
-			this->label4->AutoSize = true;
-			this->label4->Location = System::Drawing::Point(82, 145);
-			this->label4->Name = L"label4";
-			this->label4->Size = System::Drawing::Size(35, 13);
-			this->label4->TabIndex = 6;
-			this->label4->Text = L"Stock";
-			// 
-			// textprice
-			// 
-			this->textprice->Location = System::Drawing::Point(133, 105);
-			this->textprice->Name = L"textprice";
-			this->textprice->Size = System::Drawing::Size(233, 20);
-			this->textprice->TabIndex = 7;
-			// 
-			// textstock
-			// 
-			this->textstock->Location = System::Drawing::Point(133, 146);
-			this->textstock->Name = L"textstock";
-			this->textstock->Size = System::Drawing::Size(233, 20);
-			this->textstock->TabIndex = 8;
-			// 
 			// button1
 			// 
-			this->button1->Location = System::Drawing::Point(442, 48);
+			this->button1->Location = System::Drawing::Point(439, 29);
 			this->button1->Name = L"button1";
-			this->button1->Size = System::Drawing::Size(92, 23);
+			this->button1->Size = System::Drawing::Size(95, 29);
 			this->button1->TabIndex = 9;
-			this->button1->Text = L"Agregar";
+			this->button1->Text = L"Buscar";
 			this->button1->UseVisualStyleBackColor = true;
 			this->button1->Click += gcnew System::EventHandler(this, &ProductSearchForm::button1_Click);
 			// 
@@ -203,7 +167,7 @@ namespace SalesConsoleView {
 			// 
 			this->button2->Location = System::Drawing::Point(442, 96);
 			this->button2->Name = L"button2";
-			this->button2->Size = System::Drawing::Size(89, 22);
+			this->button2->Size = System::Drawing::Size(92, 20);
 			this->button2->TabIndex = 10;
 			this->button2->Text = L"Modificar";
 			this->button2->UseVisualStyleBackColor = true;
@@ -225,10 +189,6 @@ namespace SalesConsoleView {
 			this->Controls->Add(this->button3);
 			this->Controls->Add(this->button2);
 			this->Controls->Add(this->button1);
-			this->Controls->Add(this->textstock);
-			this->Controls->Add(this->textprice);
-			this->Controls->Add(this->label4);
-			this->Controls->Add(this->label3);
 			this->Controls->Add(this->dataGridView1);
 			this->Controls->Add(this->textname);
 			this->Controls->Add(this->textid);
@@ -246,7 +206,7 @@ namespace SalesConsoleView {
 	private: System::Void ProductSearchForm_Load(System::Object^ sender, System::EventArgs^ e) {
 	}
 	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
-		Medicine^ medicine = gcnew Medicine();
+		/*Medicine^ medicine = gcnew Medicine();
 		//medicine->setId(Convert::ToInt32(txtProductId->Text));
 		medicine->id = Int32::Parse(textid->Text);
 		medicine->name = textname->Text;
@@ -254,9 +214,11 @@ namespace SalesConsoleView {
 		medicine->quantity = Int32::Parse(textstock->Text);
 		Controller::AddMedicine(medicine);
 		CleanControls();
-		ShowMedicines();
+		ShowMedicines();*/
+		//boton buscar que mostrará el producto elegido en el grid
+
 	}
-		   void ShowMedicines() {
+		   /*void ShowMedicines() {
 			   List<Medicine^>^ myMedicineList = Controller::QueryAllMedicines();
 
 			   dataGridView1->Rows->Clear();
@@ -276,7 +238,7 @@ namespace SalesConsoleView {
 			   textprice->Clear();
 			   textstock->Clear();
 
-		   }
+		   }*/
 	};
 }
 

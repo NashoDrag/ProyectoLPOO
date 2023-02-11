@@ -14,6 +14,8 @@ namespace SalesConsoleView {
 	using namespace System::Windows::Forms;
 	using namespace System::Data;
 	using namespace System::Drawing;
+	using namespace salesController;
+	using namespace salesModel;
 
 	/// <summary>
 	/// Resumen de MainForm
@@ -22,6 +24,7 @@ namespace SalesConsoleView {
 	{
 	public:
 		static Employee^ employee;
+
 		MainForm(void)
 		{
 			InitializeComponent();

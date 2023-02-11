@@ -152,4 +152,4 @@ namespace SalesConsoleView {
 #pragma endregion
 	
 };
-}
+};
