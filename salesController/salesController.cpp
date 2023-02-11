@@ -7,7 +7,7 @@ int salesController::Controller::AddMedicine(Medicine^ medicine)
 {
     medicineList->Add(medicine);
 
-    //return medicine->getId();
+
     Persistance::PersistXML("Medicines.xml", medicineList);
 
     return medicine->id;
@@ -25,8 +25,6 @@ Medicine^ salesController::Controller::QueryMedicineById(int medicineId)
     return nullptr;
 }
 
-
-
 List<Medicine^>^ salesController::Controller::QueryAllMedicines()
 {
     medicineList = (List<Medicine^>^)Persistance::LoadXMLData("Medicines.xml");
@@ -43,20 +41,8 @@ int salesController::Controller::UpdateMedicine(Medicine^ medicine)
         }
     return 0;
 }
-List<Medicine^>^ salesController::Controller::QueryMedicinesByNameOrDescription(String^ value)
-{
-    medicineList = (List<Medicine^>^)Persistance::LoadXMLData("Medicines.xml");
-    List<Medicine^>^ newMedicineList = gcnew List<Medicine^>();
-    for (int i = 0; i < medicineList->Count; i++) {
-        if (medicineList[i]->name->Contains(value) || medicineList[i]->description->Contains(value))
-            newMedicineList->Add(medicineList[i]);
-    }
-    return newMedicineList;
-}
 
-
-
-int salesController::Controller::DeleteMedicine(int medicineId)
+int salesController::Controller::DeleteProduct(int medicineId)
 {
     for (int i = 0; i < medicineList->Count; i++)
         if (medicineList[i]->id == medicineId) {
@@ -282,25 +268,3 @@ Person^ salesController::Controller::QueryClientByDocNumber(String^ docNumber)
 }
 
 
-// HISTORIA 1
-/* Un granjero tenía una gallina que, cada día, ponía un huevo de oro. Un día, 
-pensando que encontraría dentro de ella una gran cantidad de oro, la mató.
-Al abrirla, vio que por dentro no tenía nada, era igual que el resto de gallinas 
-de su especie. De modo que, por ser impaciente y querer conseguir más abundancia, 
-acabó el mismo con las riquezas que la gallina le daba.
-
-Moraleja: Es conveniente estar contentos con lo que se tiene y huir de la insaciable codicia. */
-
-// HISTORIA 2
-/* Había una vez seis hindúes ciegos de saber que quisieron conocer qué era un elefante. 
-Como no podían ver, quisieron averiguarlo a través del tacto.
-El primero en indagar, llegó junto al elefante y se chocó con su duro lomo y dijo: 
-“es duro y liso como una pared”. El segundo, tocó el colmillo, y gritó: “ya veo, el elefante 
-es tan agudo como una lanza”.
-El tercer hombre tocó la trompa y dijo: “Ya sé, el elefante es como una serpiente”. 
-El cuarto tocó su rodilla y dijo: “Veo que el elefante es como un árbol”. 
-El quinto sabio se acercó a la oreja y dijo: “el elefante es como un abanico”. 
-Finalmente, el sexto tocó la cola del animal y dijo: “está claro que el elefante es como una soga”.
-
-Así es como los sabios comenzaron a discutir y pelearse por ver quién estaba en lo cierto. 
-Cada uno con su propia opinión, y todos tenían parte de razón, pero solo conocían un fragmento de la realidad.*/
