@@ -37,7 +37,7 @@ namespace SalesConsoleView {
 				delete components;
 			}
 		}
-	private: System::Windows::Forms::DataGridView^ dataGridView1;
+	private: System::Windows::Forms::DataGridView^ dgvclientes;
 	protected:
 
 
@@ -105,7 +105,7 @@ namespace SalesConsoleView {
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->BeginInit();
 			this->SuspendLayout();
 			// 
-			// dataGridView1
+			// dgvclientes
 			// 
 			this->dataGridView1->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
 			this->dataGridView1->Columns->AddRange(gcnew cli::array< System::Windows::Forms::DataGridViewColumn^  >(5) {
@@ -312,7 +312,7 @@ namespace SalesConsoleView {
 			this->Controls->Add(this->label2);
 			this->Controls->Add(this->textBox1);
 			this->Controls->Add(this->label1);
-			this->Controls->Add(this->dataGridView1);
+			this->Controls->Add(this->dgvclientes);
 			this->Name = L"CLIENTES_REGISTRADOS";
 			this->Text = L"CLIENTES_REGISTRADOS";
 			this->Load += gcnew System::EventHandler(this, &CLIENTES_REGISTRADOS::CLIENTES_REGISTRADOS_Load);

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfIndustria_Proveedora xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Industria_Proveedora>
+    <RUC>205431<RUC>
+    <product>Paracetamol<product>
+    <stock>100</stock>
+    <ProductPrice>156</ProductPrice>
+    <Admin>Inge Geodocio</Admin>
+    <Address>inge@gmail.com</Address>
+  </Industria_Proveedora>
+  <Industria_Proveedora>
+    <RUC>207963<RUC>
+    <product>Acido Clavulanico<product>
+    <stock>548</stock>
+    <ProductPrice>320</ProductPrice>
+    <Admin>Inge Aguilar</Admin>
+    <Address>aguila@gmail.com</Address>
+  </Industria_Proveedora>
+  <Industria_Proveedora>
+    <RUC>124520<RUC>
+    <product>Deflazin</product>
+    <stock> 450 </stock>
+    <ProductPrice>1023</ProductPrice>
+    <Admin>Benito Camelo</Admin>
+    <Address>badbunny@gmail.com</Address>
+  </Industria_Proveedora>
+  <Industria_Proveedora>
+    <RUC>154568<RUC>
+    <product>Dexametazona<product>
+    <stock>Simvastockina</stock>
+    <ProductPrice>650</ProductPrice>
+    <Admin>Carmelo Lames</Admin>
+    <Address>lames@gmail.com</Address>
+  </Industria_Proveedora>
+  <Industria_Proveedora>
+    <RUC>854879<RUC>
+    <product>Amoxicilina</product>
+    <stock>5000</stock>
+    <ProductPrice>1387</ProductPrice>
+    <Admin>Batman</Admin>
+    <Address>elseniordelanoche@wayne.com</Address>
+  </Industria_Proveedora>
+</ArrayOfIndustria_Proveedora>

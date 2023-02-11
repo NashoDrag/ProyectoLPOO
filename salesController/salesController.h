@@ -3,6 +3,7 @@
 using namespace System;
 using namespace System::Collections::Generic;
 using namespace salesModel;
+using namespace System::IO;
 
 namespace salesController {
 	public ref class Controller
@@ -25,6 +26,7 @@ namespace salesController {
 		// Metodo CRUD de Medicine
 		static int AddMedicine(Medicine^ medicine);
 		static Medicine^ QueryMedicineById(int medicineId);
+		
 		static List<Medicine^>^ QueryAllMedicines();
 		static int UpdateMedicine(Medicine^ medicine);
 		static int DeleteProduct(int medicineId);

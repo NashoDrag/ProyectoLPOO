@@ -5,6 +5,10 @@
 #include "Vendedor.h"
 #include "Detalle_Pedido.h"
 #pragma once
+#include "Vendedor.h"
+#include "Person.h"
+#include "Detalle_Pedido.h"
+
 using namespace System;
 using namespace System::Collections::Generic;
 namespace salesModel {

@@ -9,7 +9,7 @@ namespace salesModel {
     public ref class Person {
     public:
         property int Id;
-        property String^ DocNumber;
+        property String^ DocNumber; //dni  5485454
         property String^ Name;
         property String^ Address;
         property String^ PhoneNumber;

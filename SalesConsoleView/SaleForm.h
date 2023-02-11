@@ -426,10 +426,10 @@ namespace SalesConsoleView {
 	}
 	private: System::Void label11_Click(System::Object^ sender, System::EventArgs^ e) {
 	}
-		  // int a = 0;
+		   // int a = 0;
 	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
 		//agregamos mediamento al grid
-		
+
 		if (textBox2->Text->Trim() == "") {
 			MessageBox::Show("busque el medicamento!");
 		}
@@ -442,22 +442,22 @@ namespace SalesConsoleView {
 		textBox2->Text = "";
 		Addandshowpedido();
 		//dataGridView1->Rows->Clear();
-		
+
 			//medicamento = Controller::QueryMedicineByName(textBox2->Text);
 			//medicamento = Controller::QueryMedicineByName(textBox2->Text);	
-		
-		
+
+
 		/*dataGridView1->Rows->Clear();
-		
+
 		dataGridView1->Rows->Add(gcnew array<String^>{
 				"" + medicamento->id,
 					medicamento->name,
 					"" + medicamento->price,
 					"" ,
-					"" 
+					""
 			});*/
-		
-		
+
+
 	}
 		   void FillCmbMedicines() {
 			   comboBox1->Items->Clear();
@@ -469,14 +469,14 @@ namespace SalesConsoleView {
 		   }
 		   void Addandshowpedido() {
 			   List <Medicine^>^ NewMedicineList = Controller::QueryAllProducts_sale();
-			for (int i = 0; i < NewMedicineList->Count; i++) {
-				dataGridView1->Rows->Add(gcnew array<String^>{
-					"" + NewMedicineList[i]->id,
-						NewMedicineList[i]->name,
-						"" + NewMedicineList[i]->price
-						//"" + myProductList[i]->PriceMaj,
-						//"" + myProductList[i]->Stock
-				});
+			   for (int i = 0; i < NewMedicineList->Count; i++) {
+				   dataGridView1->Rows->Add(gcnew array<String^>{
+					   "" + NewMedicineList[i]->id,
+						   NewMedicineList[i]->name,
+						   "" + NewMedicineList[i]->price
+						   //"" + myProductList[i]->PriceMaj,
+						   //"" + myProductList[i]->Stock
+				   });
 			   }
 		   }
 	private: System::Void SaleForm_Load(System::Object^ sender, System::EventArgs^ e) {
@@ -494,91 +494,91 @@ namespace SalesConsoleView {
 		CLIENTES_REGISTRADOS^ customerForm = gcnew CLIENTES_REGISTRADOS();
 		customerForm->ShowDialog();
 	}
-private: System::Void button4_Click(System::Object^ sender, System::EventArgs^ e) {
-	//buscar cliente usando DNI
-	cliente = Controller::QueryClientByDocNumber(textBox1->Text);
+	private: System::Void button4_Click(System::Object^ sender, System::EventArgs^ e) {
+		//buscar cliente usando DNI
+		cliente = Controller::QueryClientByDocNumber(textBox1->Text);
 
-	if (cliente != nullptr) {
-		if (cliente->GetType() == Person::typeid)
-			label3->Text = cliente->DocNumber + " - " + cliente->Name +
-			" " ;
+		if (cliente != nullptr) {
+			if (cliente->GetType() == Person::typeid)
+				label3->Text = cliente->DocNumber + " - " + cliente->Name +
+				" ";
+			else
+				label3->Text = cliente->DocNumber + " - " + cliente->Name;
+		}
+		else {
+			MessageBox::Show("Cliente no encontrado!");
+		}
+	}
+	private: System::Void button6_Click(System::Object^ sender, System::EventArgs^ e) {
+		//BUSCA MEDICAMENTO POR NOMBRE O DESCRIPCION Y TE ESCRIBE EN EL LABEL EL MEDICAMENTO ENCONTRADO Y SU STOCK
+		medicamento = Controller::QueryMedicineByName(textBox2->Text);
+		if (medicamento != nullptr) {
+			if (medicamento->GetType() == Medicine::typeid)
+				label6->Text = medicamento->name + " - " + " Stock : " + medicamento->quantity +
+				" ";
+			else
+				label6->Text = medicamento->name + " - " + " Stock : " + medicamento->quantity;
+		}
+		else {
+			MessageBox::Show("Medicamento no encontrado!");
+		}
+		//textBox2->Clear();
+	}
+	private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) {
+
+		Sale^ sale = gcnew Sale();
+		sale->Id = Controller::QueryLastSaleId() + 1;
+		sale->cliente = label3->Text;
+		sale->Total = Double::Parse(textBox11->Text);
+		sale->SaleDetails = gcnew List<Detalle_Pedido^>();
+
+		for (int i = 0; i < dataGridView1->RowCount - 1; i++) {
+			Detalle_Pedido^ detail = gcnew Detalle_Pedido();
+			int medicineId = Int32::Parse(dataGridView1->Rows[i]->Cells[0]->Value->ToString());
+			detail->Id = i + 1;
+			detail->Medicine = Controller::QueryMedicineById(medicamento->id);
+			detail->UnitPrice = Convert::ToDouble(dataGridView1->Rows[i]->Cells[2]->Value->ToString());
+			detail->Quantity = Convert::ToInt32(dataGridView1->Rows[i]->Cells[3]->Value->ToString());
+			detail->SubTotal = Convert::ToDouble(dataGridView1->Rows[i]->Cells[4]->Value->ToString());
+			sale->SaleDetails->Add(detail);
+		}
+		Controller::RegisterSale(sale);
+		MessageBox::Show("Se ha registrado la venta exitosamente.");
+	}
+	private: System::Void dataGridView1_CellClick(System::Object^ sender, System::Windows::Forms::DataGridViewCellEventArgs^ e) {
+		//calculamos el total y subtotal
+
+	}
+	private: System::Void dataGridView1_CellValueChanged(System::Object^ sender, System::Windows::Forms::DataGridViewCellEventArgs^ e) {
+		//calculamos el total y subtotal
+		if (dataGridView1->Columns[e->ColumnIndex]->Name == "CANT_COL") {
+			dataGridView1->Rows[e->RowIndex]->Cells[4]->Value =
+				//Int32::Parse(dgvDetails->CurrentCell->Value->ToString())*
+				Int32::Parse(dataGridView1->Rows[e->RowIndex]->Cells[3]->Value->ToString()) *
+				Double::Parse(dataGridView1->Rows[e->RowIndex]->Cells[2]->Value->ToString());
+			RefreshTotalAmounts();
+		}
+	}
+
+		   void RefreshTotalAmounts() {
+			   double total = 0;
+			   for (int i = 0; i < dataGridView1->RowCount - 1; i++)
+				   total += Double::Parse(dataGridView1->Rows[i]->Cells[4]->Value->ToString());
+			   textBox10->Text = "" + (total * (1 - 0));
+			   //txtTax->Text = "" + (total * IGV);
+			   textBox11->Text = "" + total;
+
+
+		   }
+	private: System::Void button3_Click(System::Object^ sender, System::EventArgs^ e) {
+		if (dataGridView1->SelectedRows->Count == 1) {
+			if (dataGridView1->SelectedRows[0]->Cells[0]->Value->ToString()->Trim() != "")
+				dataGridView1->Rows->RemoveAt(dataGridView1->SelectedRows[0]->Index);
+			else
+				MessageBox::Show("No se puede eliminar una fila vacía.");
+		}
 		else
-			label3->Text = cliente->DocNumber + " - " + cliente->Name;
+			MessageBox::Show("Para eliminar un producto debe seleccionar toda la fila.");
 	}
-	else {
-		MessageBox::Show("Cliente no encontrado!");
-	}
-}
-private: System::Void button6_Click(System::Object^ sender, System::EventArgs^ e) {
-	//BUSCA MEDICAMENTO POR NOMBRE O DESCRIPCION Y TE ESCRIBE EN EL LABEL EL MEDICAMENTO ENCONTRADO Y SU STOCK
-	medicamento = Controller::QueryMedicineByName(textBox2->Text);
-	if (medicamento != nullptr) {
-		if (medicamento->GetType() == Medicine::typeid)
-			label6->Text = medicamento->name + " - " + " Stock : "  + medicamento->quantity +
-			" ";
-		else
-			label6->Text = medicamento->name + " - " + " Stock : " + medicamento->quantity;
-	}
-	else {
-		MessageBox::Show("Medicamento no encontrado!");
-	}
-	//textBox2->Clear();
-}
-private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) {
-
-	Sale^ sale = gcnew Sale();
-	sale->Id = Controller::QueryLastSaleId() + 1;
-	sale->cliente = label3->Text;
-	sale->Total = Double::Parse(textBox11->Text);
-	sale->SaleDetails = gcnew List<Detalle_Pedido^>();
-
-	for (int i = 0; i < dataGridView1->RowCount - 1; i++) {
-		Detalle_Pedido^ detail = gcnew Detalle_Pedido();
-		int medicineId = Int32::Parse(dataGridView1->Rows[i]->Cells[0]->Value->ToString());
-		detail->Id = i + 1;
-		detail->Medicine = Controller::QueryMedicineById(medicamento->id);
-		detail->UnitPrice = Convert::ToDouble(dataGridView1->Rows[i]->Cells[2]->Value->ToString());
-		detail->Quantity = Convert::ToInt32(dataGridView1->Rows[i]->Cells[3]->Value->ToString());
-		detail->SubTotal = Convert::ToDouble(dataGridView1->Rows[i]->Cells[4]->Value->ToString());
-		sale->SaleDetails->Add(detail);
-	}
-	Controller::RegisterSale(sale);
-	MessageBox::Show("Se ha registrado la venta exitosamente.");
-}
-private: System::Void dataGridView1_CellClick(System::Object^ sender, System::Windows::Forms::DataGridViewCellEventArgs^ e) {
-	//calculamos el total y subtotal
-
-}
-private: System::Void dataGridView1_CellValueChanged(System::Object^ sender, System::Windows::Forms::DataGridViewCellEventArgs^ e) {
-	//calculamos el total y subtotal
-	if (dataGridView1->Columns[e->ColumnIndex]->Name == "CANT_COL") {
-		dataGridView1->Rows[e->RowIndex]->Cells[4]->Value =
-			//Int32::Parse(dgvDetails->CurrentCell->Value->ToString())*
-			Int32::Parse(dataGridView1->Rows[e->RowIndex]->Cells[3]->Value->ToString()) *
-			Double::Parse(dataGridView1->Rows[e->RowIndex]->Cells[2]->Value->ToString());
-		RefreshTotalAmounts();
-	}
-}
-
-	   void RefreshTotalAmounts() {
-		   double total = 0;
-		   for (int i = 0; i < dataGridView1->RowCount - 1; i++)
-			   total += Double::Parse(dataGridView1->Rows[i]->Cells[4]->Value->ToString());
-		   textBox10->Text = "" + (total * (1 - 0));
-		   //txtTax->Text = "" + (total * IGV);
-		   textBox11->Text = "" + total;
-
-
-	   }
-private: System::Void button3_Click(System::Object^ sender, System::EventArgs^ e) {
-	if (dataGridView1->SelectedRows->Count == 1) {
-		if (dataGridView1->SelectedRows[0]->Cells[0]->Value->ToString()->Trim() != "")
-			dataGridView1->Rows->RemoveAt(dataGridView1->SelectedRows[0]->Index);
-		else
-			MessageBox::Show("No se puede eliminar una fila vacía.");
-	}
-	else
-		MessageBox::Show("Para eliminar un producto debe seleccionar toda la fila.");
-}
-};
+	};
 }

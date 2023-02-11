@@ -20,6 +20,9 @@ namespace salesModel {
         property String^ Admin;
         property String^ Address;
         property String^ PhoneNumber;
+        property String^ Product;
+        property int ProductStock;
+        property double ProductPrice;
     };
 
 
